@@ -1,0 +1,88 @@
+/*--------------------------------------------------
+	[REVOLUTION SLIDER]
+----------------------------------------------------*/
+
+.page-slider {
+	.fullwidthbanner-container {
+		padding: 0;
+		width: 100%;
+		position: relative;
+	 
+		.banner {
+		    width: 100%;
+			position: relative;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				> li {
+					visibility: hidden;
+					list-style: none;
+				}
+			}
+		}
+
+		h3 {
+			font-size: 63px;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: $text-white-color;
+		}
+
+		h3.title-v2 {
+			font-size: 60px;
+			line-height: 1.4;
+		}
+
+		h3.red-title {
+			color: $text-red-color;
+		}
+
+		p {
+			font-size: 21px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+		.subtitle-v1 {
+			color: #80d0de;
+		}
+		.subtitle-v2 {
+			color: #a8c6d6;
+		}
+
+		.slide_thumb_img img {
+			opacity: 1;
+		}
+
+		.slide_thumb_img:hover img {
+			opacity: 0.9;
+			text-decoration: none;
+		}
+
+		.slide_border {
+			color: #6b8e9f;
+			padding-left: 10px;
+		}
+
+		.fulllscreenvideo {
+			left: 0 !important;
+		}
+	}
+}
+
+/* Default Bullets */
+.tp-bullets.simplebullets.round .bullet {
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	margin-right: 3px;
+	border-radius: 50%;
+	opacity: 0.3;
+}
+
+.tp-bullets.simplebullets.round .bullet.selected {
+	opacity: 1;
+}
+

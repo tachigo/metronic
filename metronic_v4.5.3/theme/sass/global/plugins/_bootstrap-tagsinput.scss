@@ -1,0 +1,17 @@
+/***
+Modify bootstrap-tagsinput plugin's css
+***/
+
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    box-shadow: none;
+    font-family: arial;
+
+    &:after {
+    	font-family: arial;
+	}
+
+    &:hover {
+        text-decoration: none; 
+        box-shadow: none;   
+    }
+}

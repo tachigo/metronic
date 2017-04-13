@@ -1,0 +1,162 @@
+/***
+Forms
+***/
+
+.form-control {
+    outline: none !important;
+    box-shadow: none !important; 
+
+    &.height-auto {
+        height: auto;
+    }
+}
+
+.input-group-addon {
+    > i {
+        color: lighten($input-border, 1%);
+    }
+}
+
+/***
+Custom color buttons 
+***/
+
+@each $name, $colors in $component-colors {
+    .form-control.#{$name} {
+        border-color: map-get($colors, base);
+
+        &:focus {
+            border-color: darken(map-get($colors, base), 10%);
+        }
+    }
+
+    .form-control.focus-#{$name} {
+        &:focus {
+            border-color: map-get($colors, base);
+        }   
+    }
+}
+
+.input-xxs {
+    width: 45px !important;
+}
+
+/* Form uneditable input */
+
+.uneditable-input {
+    padding: 6px 12px;
+    min-width: 206px;
+    font-size: 14px;
+    font-weight: normal;
+    height: 34px;
+    color: $input-color;
+    background-color: $input-bg;
+    border: 1px solid $input-border;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control-static {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Form input sizing */
+
+.input-mini {
+    width: 45px !important;
+}
+
+.input-xsmall {
+    width: 80px !important;
+}
+
+.input-small {
+    width: 145px !important;
+}
+
+.input-medium {
+    width: 240px !important;
+}
+
+.input-large {
+    width: 320px !important;
+}
+
+.input-xlarge {
+    width: 420px !important;
+}
+
+@media (max-width: $screen-sm-min) { /* 768px */  
+    .input-large {
+        width: 250px !important;
+    }
+
+    .input-xlarge {
+        width: 300px !important;   
+    }
+}
+
+.input-inline {
+    display: inline-block;
+    width: auto;  
+    vertical-align: middle;
+}
+
+.input-fixed {
+   overflow: hidden; 
+}
+
+.input-fixed {
+   overflow: hidden; 
+}
+
+.form-group {
+    .input-inline  {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: $screen-sm-min) { /* 768px */  
+
+    .input-lg {
+        width: 250px !important;
+    }
+
+    .input-xlg {
+        width: 300px !important;   
+    }
+
+}
+
+/* Circle Inputs */
+
+.input-circle {
+  border-radius: 25px !important;  
+}
+
+.input-circle-right {
+  border-radius:  0 25px 25px 0 !important;
+}
+
+.input-circle-left { 
+  border-radius: 25px 0 0 25px !important;
+}
+
+.input-circle-bottom {
+  border-radius:  0 0 25px 25px !important;
+}
+
+.input-circle-top {
+  border-radius: 25px 25px 0 0 !important;
+}
+
+@if $theme-type == "material-design" {  
+    .input-group-btn {
+        .btn {
+            box-shadow: none;
+        }
+    }
+}

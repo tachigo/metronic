@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Documentation - Metronic Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="assets/google-code-prettify/prettify.css" rel="stylesheet" />
+        <link href="assets/css/docs.css" rel="stylesheet" />
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png" />
+        <style>
+            .pluginwrap { display:none; } 
+            .pluginwrapActive { display:block; }
+        </style>
+    </head>
+    <body>
+        <!-- Subhead
+            ================================================== -->
+        <header class="jumbotron subhead">
+            <div class="container container-narrow">
+                <h1>Metronic - Admin Dashboard Template</h1>
+                <p class="lead">Documentation For Metronic Version 4.0</p>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="well intro-text">
+                        <h3>Thank You For Purchasing Metronic, One of Our Premium Items!</h3>
+                        <p>
+                            If you have any questions that are beyond the scope of this help file, please email our support 
+                            <a href="mailto:support@keenthemes.com">support@keenthemes.com</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:20px;margin-bottom:20px">
+                <div class="span12">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td width="50%">
+                                    <ul class="menu">
+                                        <h4>Overview</h4>
+                                        <p>
+                                            Metronic is a responsive and multipurpose admin and frontend theme powered with <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap 3.3.4 Framework</a> for admin and backend applications. Metronic Frontend has a clean and intuitive minimalistic design which makes your next project look awesome and yet user friendly. Metronic comes with a huge collection of plugins and UI components and it works in all major web browsers, tablets and phones.
+                                        </p>
+                                        <hr>
+                                        <p>
+                                            Author:     <a href="http://www.keenthemes.com" target="_blank">KeenThemes</a><br>
+                                            Contact:    <a href="mailto:support@keenthemes.com"    target="_blank">support@keenthemes.com</a><br>
+                                            Follow:     <a href="http://twitter.com/keenthemes"     target="_blank">twitter.com/keenthemes</a><br>
+                                            Like:       <a href="http://facebook.com/keenthemes"      target="_blank">facebook.com/keenthemes</a><br>
+                                            Created On: 13/02/2013<br>
+                                            Updated On: 12/06/2015<br>
+                                        </p>
+                                        <hr>
+                                        <a class="btn btn-success" target="_blank" href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">
+                                        Live Preview 
+                                        </a>
+                                        <a class="btn btn-success" target="_blank" href="http://themeforest.net/user/keenthemes/portfolio">
+                                        Other Themes <i class="icon-share-alt icon-white"></i>
+                                        </a>
+                                                                                <hr>
+<p><strong>
+NOTE: A single license can be used only for one domain or client. Each use of the theme requires a separate license. We hope you will follow the rules as it will help us to continue supporting our themes and providing a free future updates.
+</strong>
+</p>
+<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="btn btn-primary">Purchase A New License</a>
+<a href="http://themeforest.net/licenses/standard" target="_blank" class="btn btn-default">License Info</a>
+                                    </ul>
+                                </td>
+                                <td width="50%">
+                                    <h4>Table of Contents:</h4>
+                                    <ul class="menu">
+                                        <li><a href="javascript:;" class="clickable" data-section="#overview">1. Overview</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#template_structure">2. Template Structure</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#font">3. Font</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#init">4. Javascript Initialization</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#extend">5. Coding &amp; Extending</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#sass">6. Sass Support</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#plugins">7. Javascript Plugins &amp; Resources</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#references">8. References</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#log">9. Change Log</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#upgrade">10. Upgrade</a></li>
+                                        <li><a href="javascript:;" class="clickable" data-section="#end">11. End of Documentation</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="template_structure">
+                        <div class="page-header">
+                            <h1>2. Template Structure</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <p>
+                            All template files have fixed structure consisting of <code>header</code>, <code>content</code> and <code>footer</code> as shown below:
+                        </p>
+                        <div class="row">
+                            <div class="span6">
+                                <img class="img-responsive" src="assets/img/layout.jpg">
+                            </div>
+                            <div class="span6">
+                            </div>
+                        </div>
+                        <h3>
+                            Beginning of Page  
+                        </h3>
+                        <p>
+                            Below code is used at the beginning of all HTML pages to detect Internet Explorer browser version 
+                            and set a spesific class applied to Internet Explorer versions.
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
+</pre>
+                        <h3>Page Head</h3>
+                        <p>
+                            Page head contains metadata, javascript and css files:
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;!-- BEGIN HEAD --&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;title&gt;Metronic One Page&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+&lt;meta content=&quot;&quot; name=&quot;description&quot;/&gt;
+&lt;meta content=&quot;&quot; name=&quot;author&quot;/&gt;
+&lt;!-- BEGIN GLOBAL MANDATORY STYLES --&gt;
+&lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:400,500,300,600,700&amp;subset=all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/global/plugins/font-awesome/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/global/plugins/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;!-- END GLOBAL MANDATORY STYLES --&gt;
+&lt;!-- BEGIN PAGE LEVEL PLUGIN STYLES --&gt;
+&lt;link href=&quot;../../assets/global/plugins/owl.carousel/assets/owl.carousel.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/global/plugins/plugins/slider-revolution-slider/rs-plugin/css/settings.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/global/plugins/plugins/cubeportfolio/cubeportfolio/css/cubeportfolio.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;!-- END PAGE LEVEL PLUGIN STYLES --&gt;
+&lt;!-- BEGIN THEME STYLES --&gt;
+&lt;link href=&quot;../../assets/frontend/onepage2/css/layout.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;link href=&quot;../../assets/frontend/onepage2/css/custom.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+&lt;!-- END THEME STYLES --&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;/&gt;
+&lt;/head&gt;
+&lt;!-- END HEAD --&gt;
+</pre>
+                        <h3>Header</h3>
+                        <p>
+                            Header contains of logo and top menu bar. HTML code of header container shown below:   
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;!-- BEGIN HEADER --&gt;
+&lt;header class=&quot;page-header&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+            &lt;div class=&quot;navbar-header page-scroll&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-responsive-collapse&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+                    &lt;span class=&quot;toggle-icon&quot;&gt;
+                        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;a class=&quot;navbar-brand&quot; href=&quot;#intro&quot;&gt;
+                    &lt;img class=&quot;logo-default&quot; src=&quot;../../assets/frontend/onepage2/img/logo_default.png&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;img class=&quot;logo-scroll&quot; src=&quot;../../assets/frontend/onepage2/img/logo_scroll.png&quot; alt=&quot;Logo&quot;&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+            &lt;div class=&quot;collapse navbar-collapse navbar-responsive-collapse&quot;&gt;
+                &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                    &lt;li class=&quot;page-scroll active&quot;&gt;
+                        &lt;a class=&quot;#intro&quot;&gt;Home&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#about&quot;&gt;About&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#features&quot;&gt;Features&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#team&quot;&gt;Team&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#clients&quot;&gt;Clients&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#portfolio&quot;&gt;Portfolio&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#pricing&quot;&gt;Pricing&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;page-scroll&quot;&gt;
+                        &lt;a class=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- End Navbar Collapse --&gt;
+        &lt;/div&gt;
+        &lt;!-- /container --&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;!-- END HEADER --&gt;
+</pre>
+
+                        <h3>Slider</h3>
+<p>
+Revoluton Slider
+</p>
+<pre class="prettyprint linenums">
+  &lt;!-- BEGIN INTRO SECTION --&gt;
+  &lt;section id=&quot;intro&quot;&gt;
+    &lt;!-- Slider BEGIN --&gt;
+    &lt;div class=&quot;page-slider&quot;&gt;
+        &lt;div class=&quot;fullwidthbanner-container revolution-slider&quot; &gt;
+            &lt;div class=&quot;banner&quot; &gt;
+                &lt;ul id=&quot;revolutionul&quot;&gt;
+                    &lt;!-- THE NEW SLIDE --&gt;
+                    &lt;li&gt;
+                        ...
+                    &lt;/li&gt;
+                    &lt;!-- THE NEW SLIDE --&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Slider END --&gt;
+  &lt;/section&gt;
+  &lt;!-- END INTRO SECTION --&gt;
+</pre>
+
+                        <h3>Content</h3>
+                        <p>
+                            Content consists of page title, breadcrumbs and page's main body. HTML code of Content container as shown below:   
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;!-- BEGIN MAIN LAYOUT --&gt;
+&lt;div class=&quot;page-content&quot;&gt;
+    &lt;!-- SUBSCRIBE BEGIN --&gt;
+    &lt;div class=&quot;subscribe&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;subscribe-wrap&quot;&gt;
+                &lt;div class=&quot;subscribe-body subscribe-desc md-margin-bottom-30&quot;&gt;
+                    &lt;h1&gt;Signup for free&lt;/h1&gt;
+                    &lt;p&gt;To try the most advanced business platform for mobile and desktop&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;subscribe-body&quot;&gt;
+                    &lt;form class=&quot;form-wrap input-field&quot;&gt;
+                        &lt;div class=&quot;form-wrap-group&quot;&gt;
+                            &lt;input type=&quot;name&quot; class=&quot;form-control&quot; id=&quot;name&quot; placeholder=&quot;Name&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;form-wrap-group border-left-transparent&quot;&gt;
+                            &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; placeholder=&quot;Your Email&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;form-wrap-group&quot;&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;btn-danger btn-md btn-block&quot;&gt;Signup&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- SUBSCRIBE END --&gt;
+
+    &lt;!-- BEGIN ABOUT SECTION --&gt;
+    &lt;section id=&quot;about&quot;&gt;
+        &lt;!-- Services BEGIN --&gt;
+        &lt;div class=&quot;container service-bg&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-sm-4&quot;&gt;
+                    &lt;div class=&quot;services sm-margin-bottom-100&quot;&gt;
+                        &lt;div class=&quot;services-wrap&quot;&gt;
+                            &lt;div class=&quot;service-body&quot;&gt;
+                                &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon1.png&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h2&gt;Metronic is time saver&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor consetuer &lt;br&gt; erat votpat dolore&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-sm-4&quot;&gt;
+                    &lt;div class=&quot;services sm-margin-bottom-100&quot;&gt;
+                        &lt;div class=&quot;services-wrap&quot;&gt;
+                            &lt;div class=&quot;service-body&quot;&gt;
+                                &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon2.png&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h2&gt;Created for all type Devices&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor consetuer &lt;br&gt; erat votpat dolore&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-sm-4&quot;&gt;
+                    &lt;div class=&quot;services&quot;&gt;
+                        &lt;div class=&quot;services-wrap&quot;&gt;
+                            &lt;div class=&quot;service-body&quot;&gt;
+                                &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon3.png&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h2&gt;Great individual Design&lt;/h2&gt;
+                        &lt;p&gt;Lorem ipsum dolor consetuer &lt;br&gt; erat votpat dolore&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Services END --&gt;
+    &lt;/section&gt;
+    &lt;!-- END ABOUT SECTION --&gt;
+
+    &lt;!-- BEGIN FEATURES SECTION --&gt;
+    &lt;section id=&quot;features&quot;&gt;
+        &lt;!-- Features BEGIN --&gt;
+        &lt;div class=&quot;features-bg&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;heading&quot;&gt;
+                    &lt;h2&gt;&lt;strong&gt;Metronics&lt;/strong&gt; Main Features&lt;/h2&gt;
+                    &lt;p&gt;To try the most advanced business&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- //end heading --&gt;
+
+                &lt;!-- Features --&gt;
+                &lt;div class=&quot;row margin-bottom-70&quot;&gt;
+                    &lt;div class=&quot;col-md-6 md-margin-bottom-70&quot;&gt;
+                        &lt;div class=&quot;features&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/screen1.png&quot; alt=&quot;&quot;&gt;
+                            &lt;div class=&quot;features-in&quot;&gt;
+                                &lt;h3&gt;&lt;a href=&quot;#&quot;&gt;Full sass support&lt;/a&gt;&lt;/h3&gt;
+                                &lt;p&gt;Lorem niam ipsum dolor sit ammet adipiscing et suitem elit et nonuy nibh elit niam dolor&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-6&quot;&gt;
+                        &lt;div class=&quot;features&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/screen2.png&quot; alt=&quot;&quot;&gt;
+                            &lt;div class=&quot;features-in&quot;&gt;
+                                &lt;h3&gt;&lt;a href=&quot;#&quot;&gt;Awesome design&lt;/a&gt;&lt;/h3&gt;
+                                &lt;p&gt;Lorem niam ipsum dolor sit ammet adipiscing et suitem elit et nonuy nibh elit niam dolor&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- //end row --&gt;
+                &lt;div class=&quot;row margin-bottom-80&quot;&gt;
+                    &lt;div class=&quot;col-md-6 md-margin-bottom-70&quot;&gt;
+                        &lt;div class=&quot;features&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/screen3.png&quot; alt=&quot;&quot;&gt;
+                            &lt;div class=&quot;features-in&quot;&gt;
+                                &lt;h3&gt;&lt;a href=&quot;#&quot;&gt;Built with bootstrap&lt;/a&gt;&lt;/h3&gt;
+                                &lt;p&gt;Lorem niam ipsum dolor sit ammet adipiscing et suitem elit et nonuy nibh elit niam dolor&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-6&quot;&gt;
+                        &lt;div class=&quot;features&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/screen4.png&quot; alt=&quot;&quot;&gt;
+                            &lt;div class=&quot;features-in&quot;&gt;
+                                &lt;h3&gt;&lt;a href=&quot;#&quot;&gt;AngularJS support&lt;/a&gt;&lt;/h3&gt;
+                                &lt;p&gt;Lorem niam ipsum dolor sit ammet adipiscing et suitem elit et nonuy nibh elit niam dolor&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- //end row --&gt;
+                &lt;!-- End Features --&gt;
+
+                &lt;center&gt;&lt;a href=&quot;#&quot; class=&quot;btn-brd-danger&quot;&gt;Try it for free&lt;/a&gt;&lt;/center&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Features END --&gt;
+    &lt;/section&gt;
+    &lt;!-- END FEATURES SECTION --&gt;
+
+    &lt;!-- BEGIN TEAM SECTION --&gt;
+    &lt;section id=&quot;team&quot;&gt;
+        &lt;!-- Team BEGIN --&gt;
+        &lt;div class=&quot;team-bg parallax&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;heading-light&quot;&gt;
+                    &lt;h2&gt;Our &lt;strong&gt;Great Team&lt;/strong&gt;&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- //end heading --&gt;
+
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-md-8&quot;&gt;
+                        &lt;div class=&quot;row&quot;&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member1.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;John Doe&lt;/h4&gt;
+                                            &lt;span&gt;Marketing&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member2.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;Melisa Doe&lt;/h4&gt;
+                                            &lt;span&gt;Founder&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member3.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;Alex Atkinson&lt;/h4&gt;
+                                            &lt;span&gt;Director&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- //end row --&gt;
+                        &lt;div class=&quot;row&quot;&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member4.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;John Doe&lt;/h4&gt;
+                                            &lt;span&gt;Marketing&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member5.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;Melisa Doe&lt;/h4&gt;
+                                            &lt;span&gt;Founder&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;col-sm-4&quot;&gt;
+                                &lt;div class=&quot;team-members&quot;&gt;
+                                    &lt;div class=&quot;team-avatar&quot;&gt;
+                                        &lt;img class=&quot;img-responsive&quot; src=&quot;../../assets/frontend/onepage2/img/member/member6.png&quot; alt=&quot;&quot;&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;team-desc&quot;&gt;
+                                        &lt;div class=&quot;team-details&quot;&gt;
+                                            &lt;h4&gt;Alex Atkinson&lt;/h4&gt;
+                                            &lt;span&gt;Director&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;ul class=&quot;team-socials&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- //end row --&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;div class=&quot;team-about&quot;&gt;
+                            &lt;h3&gt;Built with bootstrap&lt;/h3&gt;
+                            &lt;p&gt;Lorem niam ipsum dolor sit ammet adipiscing et suitem elit et nonuy nibh elit niam dolor suit elit amet nonummy nibh dolore onec placerat interdum purus.&lt;/p&gt;
+                            &lt;div class=&quot;margin-bottom-40&quot;&gt;&lt;/div&gt;
+                            &lt;h3&gt;AngularJS Support&lt;/h3&gt;
+                            &lt;p&gt;Etiam aliquam ex pulvinar odio dictum commodo. Nulla dui risus, egestas sit amet nisi et, eleifend cursus odio.&lt;/p&gt;
+                            &lt;div class=&quot;margin-bottom-40&quot;&gt;&lt;/div&gt;
+                            &lt;h3&gt;and WOW Features&lt;/h3&gt;
+                            &lt;p&gt;Donec placerat interdum purus, at finibus enim aliquam non. Etiam congue fringilla pharetra. Vestibulum facilisis lectus eros. Etiam congue fringilla pharetra. Lorem niam ipsum dolor sit ammet adipiscing e&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- //end row --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Team END --&gt;
+    &lt;/section&gt;
+    &lt;!-- END TEAM SECTION --&gt;
+
+    &lt;!-- BEGIN CLIENTS SECTION --&gt;
+    &lt;section id=&quot;clients&quot;&gt;
+        &lt;div class=&quot;clients&quot;&gt;
+            &lt;div class=&quot;clients-bg&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;heading-blue&quot;&gt;
+                        &lt;h2&gt;Over &lt;strong&gt;30.000&lt;/strong&gt; Customers&lt;/h2&gt;
+                        &lt;p&gt;and let's see what are they saying&lt;/p&gt;
+                    &lt;/div&gt;&lt;!-- //end heading --&gt;
+
+                    &lt;!-- Owl Carousel --&gt;
+                    &lt;div class=&quot;owl-carousel&quot;&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-1&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo1.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-2&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo2.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-3&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo3.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-4&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo4.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-5&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo5.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-6&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo6.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-7&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo7.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-8&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo8.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-9&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo9.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-10&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo10.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-11&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo11.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-12&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo12.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-13&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo13.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-quote=&quot;#client-quote-14&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/clients/logo14.png&quot; alt=&quot;&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Owl Carousel --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Clients Quotes --&gt;
+            &lt;div class=&quot;clients-quotes&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-1&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit euismod tincidunt ut laoreet dolore magna aliquam dolor sit amet consectetuer elit&lt;/p&gt;
+                        &lt;h4&gt;Mark Nilson&lt;/h4&gt;
+                        &lt;span&gt;Director&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-2&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit euismod tincidunt aliquam dolor sit amet consectetuer elit&lt;/p&gt;
+                        &lt;h4&gt;Lisa Wong&lt;/h4&gt;
+                        &lt;span&gt;Artist&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-3&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet consectetuer elit euismod tincidunt aliquam dolor sit amet elit&lt;/p&gt;
+                        &lt;h4&gt;Nick Dalton&lt;/h4&gt;
+                        &lt;span&gt;Developer&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-4&quot;&gt;
+                        &lt;p&gt;Fusce mattis vestibulum felis, vel semper mi interdum quis. Vestibulum ligula turpis, aliquam a molestie quis, gravida eu libero.&lt;/p&gt;
+                        &lt;h4&gt;Alex Janmaat&lt;/h4&gt;
+                        &lt;span&gt;Co-Founder&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-5&quot;&gt;
+                        &lt;p&gt;Vestibulum sodales imperdiet euismod.&lt;/p&gt;
+                        &lt;h4&gt;Jeffrey Veen&lt;/h4&gt;
+                        &lt;span&gt;Designer&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-6&quot;&gt;
+                        &lt;p&gt;Praesent sed sollicitudin mauris. Praesent eu metus laoreet, sodales orci nec, rutrum dui.&lt;/p&gt;
+                        &lt;h4&gt;Inna Rose&lt;/h4&gt;
+                        &lt;span&gt;Google&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-7&quot;&gt;
+                        &lt;p&gt;Sed ornare enim ligula, id imperdiet urna laoreet eu. Praesent eu metus laoreet, sodales orci nec, rutrum dui.&lt;/p&gt;
+                        &lt;h4&gt;Jacob Nelson&lt;/h4&gt;
+                        &lt;span&gt;Support&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-8&quot;&gt;
+                        &lt;p&gt;Adipiscing elit euismod tincidunt ut laoreet dolore magna aliquam dolor sit amet consectetuer elit&lt;/p&gt;
+                        &lt;h4&gt;John Doe&lt;/h4&gt;
+                        &lt;span&gt;Marketing&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-9&quot;&gt;
+                        &lt;p&gt;Nam euismod fringilla turpis vitae tincidunt, adipiscing elit euismod tincidunt aliquam dolor sit amet consectetuer elit&lt;/p&gt;
+                        &lt;h4&gt;Michael Stawson&lt;/h4&gt;
+                        &lt;span&gt;Graphic Designer&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-10&quot;&gt;
+                        &lt;p&gt;Quisque eget mi non enim efficitur fermentum id at purus.&lt;/p&gt;
+                        &lt;h4&gt;Liam Nelsson&lt;/h4&gt;
+                        &lt;span&gt;Actor&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-11&quot;&gt;
+                        &lt;p&gt;Integer et ante dictum, hendrerit metus eget, ornare massa.&lt;/p&gt;
+                        &lt;h4&gt;Madison Klarsson&lt;/h4&gt;
+                        &lt;span&gt;Director&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-12&quot;&gt;
+                        &lt;p&gt;Vestibulum sodales imperdiet euismod.&lt;/p&gt;
+                        &lt;h4&gt;Ava Veen&lt;/h4&gt;
+                        &lt;span&gt;Writer&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-13&quot;&gt;
+                        &lt;p&gt;Ut sit amet nisl nec dui lobortis gravida ut et neque. Praesent eu metus laoreet, sodales orci nec, rutrum dui.&lt;/p&gt;
+                        &lt;h4&gt;Sophia Williams&lt;/h4&gt;
+                        &lt;span&gt;Apple&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;client-quote&quot; id=&quot;client-quote-14&quot;&gt;
+                        &lt;p&gt;Nam non vulputate orci. Duis sed mi nec ligula tristique semper vitae pretium nisi. Pellentesque nec enim vel magna pulvinar vulputate.&lt;/p&gt;
+                        &lt;h4&gt;Melissa Korn&lt;/h4&gt;
+                        &lt;span&gt;Reporter&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- End Clients Quotes --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- END CLIENTS SECTION --&gt;
+
+    &lt;!-- BEGIN PORTFOLIO SECTION --&gt;
+    &lt;section id=&quot;portfolio&quot;&gt;
+        &lt;div class=&quot;portfolio&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;heading&quot;&gt;
+                    &lt;h2&gt;Theme &lt;strong&gt;Portfolio&lt;/strong&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;cube-portfolio&quot;&gt;
+                    &lt;div id=&quot;filters-container&quot; class=&quot;cbp-l-filters-alignCenter&quot;&gt;
+                        &lt;div data-filter=&quot;*&quot; class=&quot;cbp-filter-item-active cbp-filter-item&quot;&gt; All Stuff &lt;/div&gt;
+                        &lt;div data-filter=&quot;.ecommerce&quot; class=&quot;cbp-filter-item&quot;&gt; Ecommerce &lt;/div&gt;
+                        &lt;div data-filter=&quot;.admin&quot; class=&quot;cbp-filter-item&quot;&gt; Admin Theme &lt;/div&gt;
+                        &lt;div data-filter=&quot;.corporate&quot; class=&quot;cbp-filter-item&quot;&gt; Corporate &lt;/div&gt;
+                        &lt;div data-filter=&quot;.retail&quot; class=&quot;cbp-filter-item&quot;&gt; Retail &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-md-5 md-margin-bottom-50&quot;&gt;
+                            &lt;div class=&quot;heading-left&quot;&gt;
+                                &lt;h2&gt;
+                                    &lt;strong&gt;Our Work&lt;/strong&gt;
+                                    &lt;br&gt;
+                                    Lorem ipsum dolor
+                                &lt;/h2&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet consectetuer ipsum elit sed diam nonummy et euismod tincidunt ut laoreet dolore elit magna aliquam erat et ipsum volutpat magna aliquam  sed diam dolore lorem ipsum dolor sit amet consectetuer ipsum.&lt;/p&gt;&lt;br&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;btn-brd-primary&quot;&gt;Read More&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-md-7&quot;&gt;
+                            &lt;!-- Cube Portfolio --&gt;
+                            &lt;div id=&quot;grid-container&quot; class=&quot;cbp-l-grid-agency&quot;&gt;
+                                &lt;div class=&quot;cbp-item ecommerce&quot;&gt;
+                                    &lt;div class=&quot;cbp-caption&quot;&gt;
+                                        &lt;div class=&quot;cbp-caption-hover-gradient&quot;&gt;
+                                            &lt;img src=&quot;../../assets/frontend/onepage2/img/portfolio/01.jpg&quot; alt=&quot;&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;cbp-caption-activeWrap&quot;&gt;
+                                            &lt;div class=&quot;cbp-l-caption-alignCenter&quot;&gt;
+                                                &lt;div class=&quot;cbp-l-caption-body portfolio-icons&quot;&gt;
+                                                    &lt;a href=&quot;../../assets/frontend/onepage2/img/portfolio/01.jpg&quot; class=&quot;cbp-lightbox&quot; data-title=&quot;Title&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;cbp-item admin&quot;&gt;
+                                    &lt;div class=&quot;cbp-caption&quot;&gt;
+                                        &lt;div class=&quot;cbp-caption-hover-gradient&quot;&gt;
+                                            &lt;img src=&quot;../../assets/frontend/onepage2/img/portfolio/02.jpg&quot; alt=&quot;&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;cbp-caption-activeWrap&quot;&gt;
+                                            &lt;div class=&quot;cbp-l-caption-alignCenter&quot;&gt;
+                                                &lt;div class=&quot;cbp-l-caption-body portfolio-icons&quot;&gt;
+                                                    &lt;a href=&quot;../../assets/frontend/onepage2/img/portfolio/02.jpg&quot; class=&quot;cbp-lightbox&quot; data-title=&quot;Title&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;cbp-item corporate&quot;&gt;
+                                    &lt;div class=&quot;cbp-caption&quot;&gt;
+                                        &lt;div class=&quot;cbp-caption-hover-gradient&quot;&gt;
+                                            &lt;img src=&quot;../../assets/frontend/onepage2/img/portfolio/03.jpg&quot; alt=&quot;&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;cbp-caption-activeWrap&quot;&gt;
+                                            &lt;div class=&quot;cbp-l-caption-alignCenter&quot;&gt;
+                                                &lt;div class=&quot;cbp-l-caption-body portfolio-icons&quot;&gt;
+                                                    &lt;a href=&quot;../../assets/frontend/onepage2/img/portfolio/03.jpg&quot; class=&quot;cbp-lightbox&quot; data-title=&quot;Title&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;cbp-item retail&quot;&gt;
+                                    &lt;div class=&quot;cbp-caption&quot;&gt;
+                                        &lt;div class=&quot;cbp-caption-hover-gradient&quot;&gt;
+                                            &lt;img src=&quot;../../assets/frontend/onepage2/img/portfolio/07.jpg&quot; alt=&quot;&quot;&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;cbp-caption-activeWrap&quot;&gt;
+                                            &lt;div class=&quot;cbp-l-caption-alignCenter&quot;&gt;
+                                                &lt;div class=&quot;cbp-l-caption-body portfolio-icons&quot;&gt;
+                                                    &lt;a href=&quot;../../assets/frontend/onepage2/img/portfolio/04.jpg&quot; class=&quot;cbp-lightbox&quot; data-title=&quot;Title&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                    &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Cube Portfolio --&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- //end row --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- END PORTFOLIO SECTION --&gt;
+
+    &lt;!-- BEGIN PRICING SECTION --&gt;
+    &lt;section id=&quot;pricing&quot;&gt;
+        &lt;div class=&quot;pricing-bg&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;heading&quot;&gt;
+                    &lt;h2&gt;Theme &lt;strong&gt;Pricing&lt;/strong&gt;&lt;/h2&gt;
+                    &lt;P&gt;To try the most advanced business platform &lt;br&gt; for mobile and desktop&lt;/P&gt;
+                &lt;/div&gt;&lt;!-- //end heading --&gt;
+
+                &lt;!-- Pricing --&gt;
+                &lt;div class=&quot;row no-space-row&quot;&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;div class=&quot;pricing no-right-brd&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon4.png&quot; alt=&quot;&quot;&gt;
+                            &lt;h4&gt;Starter Plan&lt;/h4&gt;
+                            &lt;span&gt;$99 / Month&lt;/span&gt;
+                            &lt;ul class=&quot;pricing-features&quot;&gt;
+                                &lt;li&gt;1000 Copies&lt;/li&gt;
+                                &lt;li&gt;Unlimited Data&lt;/li&gt;
+                                &lt;li&gt;Unlimited Users&lt;/li&gt;
+                                &lt;li&gt;Forst 7 days free&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-brd-primary&quot;&gt;Purchase&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;div class=&quot;pricing pricing-red&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon5.png&quot; alt=&quot;&quot;&gt;
+                            &lt;h4&gt;Business Plan&lt;/h4&gt;
+                            &lt;span&gt;$99 / Month&lt;/span&gt;
+                            &lt;ul class=&quot;pricing-features&quot;&gt;
+                                &lt;li&gt;1000 Copies&lt;/li&gt;
+                                &lt;li&gt;Unlimited Data&lt;/li&gt;
+                                &lt;li&gt;Unlimited Users&lt;/li&gt;
+                                &lt;li&gt;Forst 7 days free&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-brd-white&quot;&gt;Purchase&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-md-4&quot;&gt;
+                        &lt;div class=&quot;pricing no-left-brd&quot;&gt;
+                            &lt;img src=&quot;../../assets/frontend/onepage2/img/widgets/icon6.png&quot; alt=&quot;&quot;&gt;
+                            &lt;h4&gt;Expert Plan&lt;/h4&gt;
+                            &lt;span&gt;$199 / Month&lt;/span&gt;
+                            &lt;ul class=&quot;pricing-features&quot;&gt;
+                                &lt;li&gt;1000 Copies&lt;/li&gt;
+                                &lt;li&gt;Unlimited Data&lt;/li&gt;
+                                &lt;li&gt;Unlimited Users&lt;/li&gt;
+                                &lt;li&gt;Forst 7 days free&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-brd-primary&quot;&gt;Purchase&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- //end row --&gt;
+                &lt;!-- End Pricing --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- END PRICING SECTION --&gt;
+&lt;/div&gt;
+&lt;!-- END MAIN LAYOUT --&gt;
+</pre>
+                        <h3>Footer</h3>
+                        <pre class="prettyprint linenums">
+&lt;!-- BEGIN CONTACT SECTION --&gt;
+&lt;section id=&quot;contact&quot;&gt;
+    &lt;!-- Footer --&gt;
+    &lt;div class=&quot;footer&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-sm-6&quot;&gt;
+                    &lt;div class=&quot;heading-left-light&quot;&gt;
+                        &lt;h2&gt;Say hello to Metronic&gt;&lt;/h2&gt;
+                        &lt;p&gt;To try the most advanced business platform &lt;br&gt; for mobile and desktop&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-sm-6&quot;&gt;
+                    &lt;div class=&quot;form&quot;&gt;
+                        &lt;div class=&quot;form-wrap&quot;&gt;
+                            &lt;div class=&quot;form-wrap-group&quot;&gt;
+                                &lt;input type=&quot;text&quot; placeholder=&quot;Your Name&quot; class=&quot;form-control&quot;&gt;
+                                &lt;input type=&quot;text&quot; placeholder=&quot;Subject&quot; class=&quot;border-top-transparent form-control&quot;&gt;
+                            &lt;/div&gt;                
+                            &lt;div class=&quot;form-wrap-group border-left-transparent&quot;&gt;
+                                &lt;input type=&quot;text&quot; placeholder=&quot;Your Email&quot; class=&quot;form-control&quot;&gt;
+                                &lt;input type=&quot;text&quot; placeholder=&quot;Contact Phone&quot; class=&quot;border-top-transparent form-control&quot;&gt;
+                            &lt;/div&gt;                
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;textarea rows=&quot;8&quot; name=&quot;message&quot; placeholder=&quot;Write comment here ...&quot; class=&quot;border-top-transparent form-control&quot;&gt;&lt;/textarea&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn-danger btn-md btn-block&quot;&gt;Send it&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End Footer --&gt;
+
+    &lt;!-- Footer Coypright --&gt;
+    &lt;div class=&quot;footer-copyright&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h3&gt;Metronic&lt;/h3&gt;
+            &lt;ul class=&quot;copyright-socials&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-dribbble&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pinterest&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;P&gt;Designed with love by KeenThemes&lt;/P&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End Footer Coypright --&gt;
+&lt;/section&gt;
+&lt;!-- END CONTACT SECTION --&gt;
+</pre>
+                        <h3>End Of Page(Javascripts)</h3> 
+                        <p>Javascript files loaded in the end of page. This will reduce page load time.</p>
+                        <pre class="prettyprint linenums">
+&lt;!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) --&gt;
+&lt;!-- BEGIN CORE PLUGINS --&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;../../assets/global/plugins/respond.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/excanvas.min.js&quot;&gt;&lt;/script&gt; 
+&lt;![endif]--&gt;
+&lt;script src=&quot;../../assets/global/plugins/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/jquery-migrate.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/bootstrap/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- END CORE PLUGINS --&gt;
+&lt;!-- BEGIN PAGE LEVEL PLUGINS --&gt;
+&lt;script src=&quot;../../assets/global/plugins/jquery.easing.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/jquery.parallax.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/smooth-scroll/smooth-scroll.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/owl.carousel/owl.carousel.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- BEGIN Cubeportfolio --&gt;
+&lt;script src=&quot;../../assets/global/plugins/cubeportfolio/cubeportfolio/js/jquery.cubeportfolio.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/frontend/onepage2/scripts/portfolio.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- END Cubeportfolio --&gt;
+&lt;!-- BEGIN RevolutionSlider --&gt;
+&lt;script src=&quot;../../assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/frontend/onepage2/scripts/revo-ini.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- END RevolutionSlider --&gt;
+&lt;!-- END PAGE LEVEL PLUGINS --&gt;
+&lt;!-- BEGIN PAGE LEVEL SCRIPTS --&gt;
+&lt;script src=&quot;../../assets/frontend/onepage2/scripts/layout.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;!-- END PAGE LEVEL SCRIPTS --&gt;
+&lt;script&gt;
+jQuery(document).ready(function() {    
+   Layout.init(); // init layout
+   RevosliderInit.initRevoSlider(); // Revolution Slider layout
+});
+&lt;/script&gt;
+&lt;!-- END JAVASCRIPTS --&gt;
+</pre>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="font">
+                        <div class="page-header">
+                            <h1>3. Fonts</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <p>
+                            Metronic uses Open Sans font from google fonts. The font must be loaded in HTML heade before the rest of css files:</code>
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:400,500,300,600,700&amp;subset=all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;</pre>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+            <div class="span12">
+                <section id="init">
+                    <div class="page-header">
+                        <h1>4. Javascript Initialization</h1>
+                        <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                    </div>
+                    <p>
+                        Core javascript initialization implemented in <code>assets/frontend/layout/scripts/layout.js</code> thorugh Layout object as shown below.
+                        This approach enables an easy modular implementation to initialize jquery plugins and other application logics.
+                    </p> 
+                    <pre class="prettyprint linenums">
+var Layout = function () {
+
+    var localVariable; //local variable
+
+    var sampleFunction = function() {
+       //sample function code
+    }
+
+    return {
+
+        //main method to initiate template pages
+        init: function () {           
+            sampleFunction() // call local function
+        },
+
+        //sample method declaration
+        sampleMethod: function (test) 
+        {
+          alert(test);
+      }
+
+    };
+
+}();
+</pre>
+
+    
+ 
+                </section> 
+            </div>  
+        </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="extend">
+                        <div class="page-header">
+                            <h1>5. Coding &amp; Extending</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <h3>
+                            CSS
+                        </h3>
+                        <p>
+                            To overide the theme CSS styles you can use <code>../../assets/frontend/onepage2/css/custom.css</code> for your own customization. This will make the future updates easier if you keep your own CSS code seperate.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="sass">
+                        <div class="page-header">
+                            <h1>6. SASS Support</h1> 
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <p>
+                            Metronic Admin Themes CSS is powered by SASS(<a href="sass-lang.com" target="_black">sass-lang.com</a>). Required SASS versions is v3.4.13 or later. We recommend you to use Koala App Tool from <a href="koala-app.com" target="_black">koala-app.com</a> to compile realtime the SASS files. So just install the Koala App Tool and add the Metronic SASS directory(theme/sass) to start compiling the SASS files. 
+                        </p>
+                        <p>
+                            When you compile the sass files do not compile includable sass files that their filename starts with underscore(e.g: _variables.scss, _header.scss). Only the master files can be compiled(all the scss files without underscore infront of their filenames). 
+                            Refer the below master SASS files to be compiled to spesific paths. For more info please check sass/koala-config.json file which used as a main configuration file to comple the Metronic sass files. 
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="plugins">
+                        <div class="page-header">
+                            <h1>7. Javascript Plugins &amp; Resources</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <h3>
+                            Select Plugin Or Resource:
+                        </h3>
+                        <select id="pluginslist" onchange="ShowPlugin();">
+                            <option value="bootstrap">Bootstrap</option>
+                            <option value="revslider">Revolution Slider</option>
+                            <option value="cubeportfolio">Cubeportfolio</option>
+                            <option value="parallax">Parallax</option>
+                            <option value="smooth-scroll">Smooth Scroll</option>
+                            <option value="owl">Owl Carousel</option>
+                            <option value="opensans">Open Sans</option>
+                        </select>                   
+                        <script>
+                            function ShowPlugin(){
+                                var id = $('#pluginslist').val();
+                                $('.pluginwrap').hide();
+                                $('#' + id).show();
+                                return;
+                            }
+                        </script>
+                        <div id="bootstrap" class="pluginwrap pluginwrapActive">
+                            <h3>Bootstrap</h3>
+                            <p>
+                                Metronic Frontennd based on Twitter Bootstrap
+                            </p>
+                            <h4>CSS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;link href=&quot;../../assets/global/plugins/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;</pre>
+                            <h4>JS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;script src=&quot;../../assets/global/plugins/bootstrap/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre>
+                            <h4>Official Documentation</h4>
+                            <a href="http://getbootstrap.com" target="_blank">http://getbootstrap.com</a>
+                        </div>
+
+                        <div id="revslider" class="pluginwrap">
+                            <h3>Revolution Slider</h3>
+                            <p>
+                                Turn simple HTML markup into a responsive or fullwidth slider with must-see-effects and meanwhile keep or build your SEO optimization.
+                            </p>
+                            <h4>CSS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../assets/global/plugins/slider-revolution-slider/rs-plugin/css/settings.css&quot; media=&quot;screen&quot;&gt;</pre>
+                        <h4>JS Files</h4>
+                        <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;../../assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;../../assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js&quot;&gt;&lt;/script&gt;</pre>
+                            <h4>Official Documentation</h4>
+                            <p>
+                                Please kindly find documentation for Revolution Slider in downloaded pack
+                            </p>
+                        </div>
+
+                        <div id="cubeportfolio" class="pluginwrap">
+                            <h3>Cubeportfolio</h3>
+                            <p>
+                                Cube Portfolio is a jQuery grid plugin that provides powerfull portfolio system, beautiful animated filtering, custom captions and it’s perfect for portfolio projects, horizontal slider, images gallery, team members, blog posts or any other ordered grid content.
+                            </p>
+                            <h4>CSS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../assets/global/plugins/cubeportfolio/cubeportfolio/css/cubeportfolio.min.css&quot; media=&quot;screen&quot;&gt;</pre>
+                            <h4>JS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;script src=&quot;../../assets/global/plugins/cubeportfolio/cubeportfolio/js/jquery.cubeportfolio.min.js&quot;&gt;&lt;/script&gt;</pre>
+                            <h4>Official Documentation</h4>
+                            <p>
+                                Please kindly find documentation for Revolution Slider in downloaded pack
+                            </p>
+                        </div>
+
+                        <div id="owl" class="pluginwrap">
+                            <h3>Owl Carousel</h3>
+                            <p>
+                                Touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider.
+                            </p>
+                            <h4>CSS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../assets/global/plugins/owl.carousel/assets/owl.carousel.css&quot; media=&quot;screen&quot;&gt;</pre>
+                            <h4>JS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;script src=&quot;../../assets/global/plugins/owl.carousel/owl.carousel.min.js&quot;&gt;&lt;/script&gt;</pre>
+                            <h4>Official Documentation</h4>
+                            <p>
+                                http://www.owlcarousel.owlgraphic.com/docs/started-welcome.html
+                            </p>
+                        </div>
+
+                        <div id="parallax" class="pluginwrap">
+                            <h3>Parallax</h3>
+                            <p>
+                                Parallax Engine that reacts to the orientation of a smart device
+                            </p>
+                            <h4>JS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;script src=&quot;../../assets/global/plugins/jquery.parallax.js&quot;&gt;&lt;/script&gt;</pre>
+                        </div>
+                        
+                        <div id="smooth-scroll" class="pluginwrap">
+                            <h3>Smooth Scroll</h3>
+                            <p>
+                                Smooth Scroll Engine that reacts to the orientation of a smart device
+                            </p>
+                            <h4>JS Files</h4>
+                            <pre class="prettyprint linenums">
+&lt;script src=&quot;../../assets/global/plugins/jquery.easing.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../assets/global/plugins/smooth-scroll/smooth-scroll.js&quot;&gt;&lt;/script&gt;</pre>
+                            <h4>Official Documentation</h4>
+                            <p>
+                                https://gist.github.com/galambalazs/6477177/
+                            </p>
+                        </div>
+
+                        <div id="opensans" class="pluginwrap">
+                            <h3>Open Sans</h3>
+                            <p>
+                                Metornic uses Open Sans web font from google fonts: http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700
+                            </p>
+                            <h4>CSS Files</h4>
+                            <pre class="prettyprint linenums">
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+                            </pre>
+                            <h4>Official Documentation</h4>
+                            <a href="http://www.google.com/webfonts" target="_blank">http://www.google.com/webfonts</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="references">
+                        <div class="page-header">
+                            <h1>8. References</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <p>
+                            Below is the list of all plugins and external resources used to power this template.
+                        </p> 
+                        <table class="table table-bordered table-striped" width="600">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>URL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>jQuery 1.11.2</td>
+                                    <td>Core Javascript library</td>
+                                    <td><a href="http://www.jquery.com" target="_blank">http://www.jquery.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Twitter Bootstrap v3.3.4</td>
+                                    <td>Sleek, intuitive, and powerful front-end framework for faster and easier web development</td>
+                                    <td><a href="http://getbootstrap.com" target="_blank">http://getbootstrap.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Scrolling Nav</td>
+                                    <td>A basic, unstyled Bootstrap page layout for creating smooth scrolling, one page websites.</td>
+                                    <td><a href="http://startbootstrap.com/template-overviews/scrolling-nav/" target="_blank">http://startbootstrap.com/template-overviews/scrolling-nav/</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Revolution Slider</td>
+                                    <td>Turn simple HTML markup into a responsive or fullwidth slider with must-see-effects and meanwhile keep or build your SEO optimization.</td>
+                                    <td><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848?WT.ac=item_more_thumb&WT.seg_1=item_more_thumb&WT.z_author=themepunch" target="_blank">Revolution Slider on CodeCanyon</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Cubeportfolio</td>
+                                    <td>Cube Portfolio is a jQuery grid plugin that provides powerfull portfolio system, beautiful animated filtering, custom captions and it’s perfect for portfolio projects, horizontal slider, images gallery, team members, blog posts or any other ordered grid content.</td>
+                                    <td><a href="http://codecanyon.net/item/cube-portfolio-responsive-jquery-grid-plugin/6372959" target="_blank">Cube Portfolio on CodeCanyon</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Parallax</td>
+                                    <td>Parallax Engine that reacts to the orientation of a smart device</td>
+                                    <td><a href="http://ianlunn.co.uk/plugins/jquery-parallax/" target="_blank">http://ianlunn.co.uk/plugins/jquery-parallax/</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Owl Carousel 2.0.0-beta.2.4</td>
+                                    <td>Touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider.</td>
+                                    <td><a href="http://www.owlcarousel.owlgraphic.com/" target="_blank">http://www.owlcarousel.owlgraphic.com/</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Smooth Scroll</td>
+                                    <td>Smooth Scroll Engine that reacts to the orientation of a smart device</td>
+                                    <td><a href="https://gist.github.com/galambalazs/6477177/" target="_blank">https://gist.github.com/galambalazs/6477177/</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Open Sans</td>
+                                    <td>
+                                        Metornic Frontend uses Open Sans web font from google fonts:
+                                        http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700</td>
+                                    <td><a href="http://www.google.com/webfonts" target="_blank">http://www.google.com/webfonts</a></td>
+                                </tr>
+                            </tbody>
+                        </table>     
+                    </section> 
+              </div>  
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="log">
+                        <div class="page-header">
+                            <h1>9. Change Log</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+
+                        <style>
+                            .changelog-list ul {
+                                margin: 5px 20px;
+                                padding: 0;
+                            }
+
+                            .changelog-list li {
+                                padding: 5px;
+                            }
+                        </style>
+
+
+                                 <h4>Version 4.0 – 12 June 2015(Both LTR and RTL versions)</h4>
+                <ul>
+                    <li>
+                      No changes
+                    </li>
+                </ul>
+
+                  <h4>Version 3.9.0 – 7 May 2015(Both LTR and RTL versions)</h4>
+                <ul>
+                    <li>
+                      No changes
+                    </li>
+                </ul>
+                <br>
+
+                        <div class="changelog-list"  style="height: 500px; overflow-y:auto; border: 1px solid #ddd; background: #fff; padding: 20px;">
+
+                            <h4>Version 3.8.1 – 24 April 2015(Both LTR and RTL versions)</h4>
+                            <li>
+                                Header Menu Improvement
+                                <ul>        
+                                    <li>Modified css file: <code>assets/frontend/onepage2/css/layout.css</code></li>
+                                </ul>
+                                <br>
+                                <h4>Version 1.0 – 24 April 2013</h4>
+                                <ul>
+                                    <li>Initial release - v3.8.0</li>
+                                </ul>
+                            </li>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="upgrade">
+                        <div class="page-header">
+                            <h1>10. Upgrade</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <h4>Upgrade to v3.8.1</h4>
+                        <p>
+                        Just replace the assets folder or refer to the above changelog.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <section id="end">
+                        <div class="page-header">
+                            <h1>11. End Of Documentation</h1>
+                            <a href="javascript:;">To top <i class="icon-arrow-up"></i></a>
+                        </div>
+                        <p>
+                            Once again, thanks for purchasing Metronic. We hope you will enjoy using it for your next project.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+        <footer class="footer">
+            <div class="container container-narrow">
+                <p>Metronic - Admin Dashboard Template. Designed and built with love by <a href="http://www.keenthemes.com" target="_blank">keenthemes</a> 
+            </div>
+        </footer>
+        <!-- Le javascript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery-1.8.3.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/js/application.js"></script>
+    </body>
+</html>

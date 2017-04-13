@@ -1,0 +1,15 @@
+/******************************
+ 3RD PARTY PLUGIN CUSTOMIZATION 
+******************************/
+
+// Global settings
+$theme-style: 'square'; 
+$theme-type:  'default'; 
+
+@import '_plugins';   
+
+.test {
+	color: lighten(#8998b5, 28%);
+	border-color: darken(#32c5d2, 5%);
+	background: darken(#e7505a, 5%);
+}
