@@ -1,0 +1,139 @@
+//
+//** Body
+// Page body container
+
+//== General Mode
+body {
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.m-body {	
+	overflow: hidden;  
+	background: array-get($m-config-base, body, self, bg-color); 
+
+	.m-content {
+		padding: 30px 0;
+	}
+
+	//== Fix fluid flex box item hor overflow issue
+	.m-wrapper {
+		width: 100%;
+	}
+
+	@include border-radius( array-get($m-config-base, body, self, border-radius) );
+}
+
+//== Desktop Mode
+@include desktop {
+	.m-body {	
+		margin: array-get($m-config-base, body, self, margin, desktop, boxed);
+
+		.m-page--fluid & {
+			margin: array-get($m-config-base, body, self, margin, desktop, fluid);
+		}
+
+		.m-header--fixed & {
+			margin-top: array-get($m-config-header, header, fixed, height, default, desktop); 
+		}
+
+		.m-body__nav {
+			position: relative;
+			z-index: 1;
+			@include border-top-left-radius( array-get($m-config-base, body, self, border-radius) );
+			@include border-top-right-radius( array-get($m-config-base, body, self, border-radius) );
+			padding: array-get($m-config-base, body, self, padding, desktop);
+
+			height: array-get($m-config-base, body, nav, height);
+			background: array-get($m-config-base, body, nav, bg-color);
+			@include shadow( array-get($m-config-base, body, nav, shadow));		
+		}
+
+		.m-body__content {
+			padding: array-get($m-config-base, body, self, padding, desktop);
+				
+			.m-body--fixed & {
+				overflow-x: hidden;
+				overflow-y: auto;
+				position: relative;
+				z-index: 0;
+				height: 1px;
+				margin: array-get($m-config-base, body, self, scrollbar, radius);
+
+				&::-webkit-scrollbar {
+				  width: array-get($m-config-base, body, self, scrollbar, width);
+				}
+				 
+				&::-webkit-scrollbar-track {
+					background: transparent;
+					@include border-radius( array-get($m-config-base, body, self, scrollbar, radius) );
+				}
+				 
+				&::-webkit-scrollbar-thumb {				  	
+				  	background: array-get($m-config-base, body, self, scrollbar, thumb-color);  
+				  	@include border-radius( array-get($m-config-base, body, self, scrollbar, radius) );
+				}
+
+				@include border-radius( array-get($m-config-base, body, self, border-radius) );
+			}
+
+			// body wrapper
+			.m-wrapper {
+				.m-aside-left--enabled & {
+					@include shadow(array-get($m-config-base, body, wrapper, shadow));
+					padding-left: array-get($m-config-base, body, wrapper, space);
+				}
+
+				.m-aside-right--enabled & {
+					padding-right: array-get($m-config-base, body, wrapper, space);
+				}
+			}
+
+			// content
+			.m-content {
+				padding: array-get($m-config-base, body, content, padding, desktop);
+			}
+		}
+	}
+
+	.m-body--fixed.body {
+		overflow: hidden;
+	}
+}
+
+// Tablet & Mobile Mode
+@include tablet-and-mobile {
+	.m-body {
+		margin: array-get($m-config-base, body, self, margin, mobile);
+
+		.m-body--mobile-fixed & {
+			overflow: auto;
+			height: 1px;
+		}
+
+		//== Body content
+		.m-body__content {
+			padding: array-get($m-config-base, body, self, padding, mobile);
+
+			// content
+			.m-content {	
+				padding: array-get($m-config-base, body, content, padding, mobile);
+			}
+		}
+
+		//== Body nav
+		.m-body__nav {
+			height: 0;
+		}
+
+		//== Fixed header mode
+		.m-header--fixed-mobile & { 
+			margin-top: array-get($m-config-header, header, fixed, height, default, mobile);  
+		}
+	}
+
+	.m-body--mobile-fixed.body {
+		overflow: hidden;
+	}
+}

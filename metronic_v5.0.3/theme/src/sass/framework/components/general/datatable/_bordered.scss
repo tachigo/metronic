@@ -1,0 +1,269 @@
+//
+//** "Datatable" Component
+//
+
+//
+//** Nav Component
+//
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component--datatable-default-base() {    
+	.m-datatable.m-datatable--default {
+		
+		//== Base Table
+		> .m-datatable__table {
+			//border: 1px solid #eee;
+			background-color: #fff;
+			border-collapse: collapse;
+			overflow: hidden;
+			display: none;
+
+			> .m-datatable__head,
+			> .m-datatable__body,
+			> .m-datatable__foot { 
+				visibility: hidden;
+				display: block;
+
+				.m-datatable__row {
+					width: 100%;
+
+					> .m-datatable__cell {						
+						//border-right: 1px solid #eee;
+						//border-bottom: 1px solid #eee;
+						padding: 10px 10px;
+						font-size: get-font-size(regular);
+
+						i {
+							font-size: get-font-size(icon);
+						}
+						
+						&:last-child {
+							//border-right: 0;
+						}
+
+						&.m-datatable__cell--left {
+							text-align: left;
+						}
+
+						&.m-datatable__cell--right {
+							text-align: right;
+						}
+
+						&.m-datatable__cell--center {
+							text-align: center;
+						}
+
+						&.m-datatable__cell--sort {
+							cursor: pointer;
+						}
+
+						&.m-datatable__cell--resizing {
+							cursor: col-resize;
+						}
+
+						span {
+							display: block;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+
+				> .m-datatable__lock-left {
+					.m-datatable__cell:last-child {
+						border-right: 1px solid #eee;
+					}
+				}
+
+				> .m-datatable__lock-right {
+					.m-datatable__cell:first-child {
+						border-left: 1px solid #eee;
+					}
+				}
+			}
+
+			> .m-datatable__head {
+				.m-datatable__row {
+					> .m-datatable__cell {
+						background: get-color(light, panel, '-');
+						font-weight: get-font-weight('bolder');
+					}
+				}
+			}
+
+			> .m-datatable__body {
+				.m-datatable__row {
+					> .m-datatable__cell {
+						
+					}
+				}
+			}
+
+			> .m-datatable__foot {
+				.m-datatable__row {
+					> .m-datatable__cell {
+						
+					}
+				}
+			}
+		}
+
+		// Loaded state
+		&.m-datatable--loaded {
+			> .m-datatable__table {
+				display: block;
+
+				> .m-datatable__head,
+				> .m-datatable__body,
+				> .m-datatable__foot {
+					visibility: visible;
+					display: block;
+
+					.m-datatable__row {
+						display: table;
+						table-layout: initial;
+
+						> .m-datatable__cell {
+							display: table-cell;
+						}
+					}
+				}
+			}
+		}
+
+		// Lock state
+		&.m-datatable--lock {
+			> .m-datatable__table {
+				> .m-datatable__head,
+				> .m-datatable__body,
+				> .m-datatable__foot {
+					> .m-datatable__lock {
+						//display: table-cell;
+						display: inline-block;
+						position: relative;
+						vertical-align: top;
+						overflow: hidden;
+
+						.m-datatable__row {
+							> .m-datatable__cell {
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Subtable stat
+		&.m-datatable--subtable {
+			> .m-datatable__table {
+				> .m-datatable__head,
+				> .m-datatable__body,
+				> .m-datatable__foot {
+					.m-datatable__row {
+						width: 100%;
+
+						> .m-datatable__cell {
+							> span {
+								//display: inline;
+							}
+						}
+					}
+					.m-datatable__row-detail {
+						display: table;
+						width: 100%;
+
+						> .m-datatable__detail {
+							background-color: #eeeeee;
+							padding: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		// Scrollable state
+		&.m-datatable--scroll {
+			> .m-datatable__table {
+				display: block;
+
+				> .m-datatable__head,
+				> .m-datatable__body,
+				> .m-datatable__foot {
+				}
+
+				> .m-datatable__head,
+				> .m-datatable__foot {
+					overflow: hidden;
+
+					.m-datatable__row {
+						position: relative;
+					}
+				}
+
+				> .m-datatable__body {
+					overflow: hidden;
+				}
+			}
+		}
+		
+		//== Spinner
+		> .m-datatable__spinner {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			> .m-datatable__spinner-wrapper {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		//== Pagination
+		> .m-datatable__pager {
+			margin-top: 20px;
+
+			> .m-datatable__pager-nav {
+				padding: 0;
+				display: inline-block;
+
+				> li {
+					margin-left: 10px;
+					display: inline-block;
+
+					&.active {
+						font-weight: bold;
+					}
+
+					> .m-datatable__pager-link {
+						cursor: pointer;
+					}
+				}
+			}
+
+			> .m-datatable__pager-info {
+				float: right;
+			}
+		}
+	}
+}
+
+//== Component Skin
+@mixin m-build-component--datatable-default-skin($skin) {
+    @include component-skin('.m-datatable.m-datatable--default', $skin) {
+        
+    }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component--datatable-default-base();
+
+//== Component Skin - Light
+//@include m-build-component--datatable-default-skin( light);

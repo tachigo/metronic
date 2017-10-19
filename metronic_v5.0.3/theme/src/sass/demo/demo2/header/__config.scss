@@ -1,0 +1,344 @@
+//
+//** Header Settings
+//
+
+$m-config-header: (
+	//== Header
+	header: (
+		// header itself
+		self: (
+			padding: (
+				desktop: 0,
+				mobile: 0
+			),
+			fixed: (
+				zindex: 101,
+			),
+			height: (
+				desktop: (
+					top: (
+						default: 90px,
+						minimize: 60px
+					),
+					bottom: 70px
+				),
+				mobile: 70px
+			),
+			transition: (
+				hide: all 0.3s ease 0.3s,
+				general: all 0.3s ease
+			)
+		),
+		top: (
+			bg-color: #2c2d3a
+		),
+		bottom: (
+			bg-color: #262734
+		)			
+	),
+
+	//== Brand
+	brand: (
+		// brand itself
+		self: (
+			bg-color: #282a3c,
+			padding: (
+				desktop: 0px 30px 0px 0px,
+				mobile: 0px 20px
+			),
+			width: (
+				default: $m-aside-left-width,
+				minimize: $m-aside-left-width-minimize
+			)
+		),
+
+		// logo
+		logo: (
+			height: (
+				minimize: 36px
+			)
+		),
+
+		// brand tools
+		tools: (
+			// itself
+			self: (
+				// space between togglers and icons
+				space: (
+					mobile: 15px 
+				)
+			),
+
+			// toggler
+			toggler: (
+				width: 24px,
+				height: 24px,  
+				transition-duration: 0.4s,
+				thickness: 1px,
+				space: 6px, 
+				radius: 4px,
+				color: (
+					default: #6c6e86,
+					hover: get-brand-color(),
+					active: get-brand-color()
+				)
+			),
+
+			// icon
+			icon: (
+				font-size: 1.3rem,
+				color: (
+					default: #6c6e86,
+					hover: get-brand-color(),
+					active: get-brand-color()
+				)
+			)
+		)
+	),
+
+	//== Topbar
+	topbar: (
+		// Default mode
+		default: (		
+			// self
+			self: (
+				padding: (
+					desktop: 0px,
+					min-desktop: 0px,
+					mobile: 0px 5px 0px 20px
+				),
+				transition-time: (
+					push: .6s
+				)
+			),
+			// nav bar
+			nav: (
+				// nav itself 
+				self: (
+					margin: (
+						desktop: 0 0 0 30px,
+						min-desktop: 0 0 0 5px,
+						mobile: 0
+					)
+				),
+				// nav item
+				item: (
+					// self
+					self: (
+						padding: (
+							desktop: 0 4px,
+							min-desktop: 0 4px,
+							mobile: 0 2px
+						)
+					),
+					// item link
+					link: (
+						// general icon
+						icon: (
+							font-size: (
+								desktop: 1.6rem,
+								mobile: 1.6rem
+							),
+							align: center,
+							bg-hover: (
+								desktop: #2f303e,
+								mobile: rgba(#b7bace, 0.2)
+							),
+							font-color:	(
+								desktop: #bc1965,
+								mobile: #bc1965
+							)
+						),
+						// aside toggle icon
+						aside-toggle-icon: (
+							font-color:	(
+								desktop: #ffffff,
+								mobile: #b7bace
+							)
+						),
+						// user link
+						user: (
+							// self
+							self: (
+								padding-left: (
+									desktop: 15px,
+									mobile: 5px
+								)
+							),
+							// welcome
+							welcome: (
+								font-size: 1rem,
+								font-weight: 500,
+								font-color:	(
+									desktop: #5b5c6e,
+									mobile: #b7bace
+								)
+							),
+
+							// username
+							username: (
+								align: left,
+								font-size: 1rem,
+								font-weight: 500,
+								font-transform:	inherit,
+								font-color:	(
+									desktop: (
+										default: #ffffff,
+										hover: get-brand-color()
+									),
+									mobile: (
+										default: #5b5c6e,
+										hover: get-brand-color()
+									)
+								)
+							),
+
+							// userpic
+							userpic: (
+								max-width: (
+									desktop: 41px,
+									mobile: 31px
+								),
+								margin: 0 0 0 5px
+							)
+						),
+						// link badge
+						badge:	(
+							top: (
+								desktop: 20%,
+								mobile: 5px
+							)
+						)
+					),
+				),
+
+				// dropdowns
+				dropdown: (
+					notifications: (
+						bg-color: #7e55dd
+					),
+					quick-actions: (
+						bg-color: #6f47d0
+					),
+					user-profile: (
+						bg-color: #7948e1
+					)
+				)
+			)
+		),
+
+		// Mobile toggle mode
+		toggle: (
+			transition: all 0.3s ease,
+			bg-color: #fff,
+			box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.1),
+			height: (
+				mobile: 50px
+			)
+		)
+	),
+
+	//== search
+	search: (
+		// self
+		self: (
+			transition-time: 0.4s,
+			width: (
+				desktop: (
+					expandable: (
+						initial: 160px,
+						expanded: 240px
+					),
+					default: 180px
+				)						
+			),
+			border-radius: 30px
+		),
+		// input
+		input: (
+			font-size: 1rem,
+			padding: (
+				desktop: 0.75rem 1.5rem 0.75rem 0.75rem,
+				mobile: 7px 10px 7px 20px
+			),
+			bg-color: (
+				desktop: (
+					default: #2c2d3a,
+					focus: #20212e
+				),
+				mobile: #ffffff
+			),
+			font-color: (
+				desktop: #64688d,
+				mobile: #333333
+			),
+			placeholder-color: (
+				desktop: #5c5f77,
+				mobile: #666666
+			)
+		),
+
+		// icon
+		icon: (
+			// search icon
+			search: (
+				width: (
+					desktop: 30px,
+					mobile: 30px
+				),
+				padding: (
+					desktop: 0 0 0 1.25rem,
+					mobile: 0 0 0 20px
+				),
+				font-size: (
+					desktop: 1.3rem,
+					mobile: 1.6rem
+				),
+				font-color: (
+					desktop: get-brand-color(),
+					mobile:  #bcc0cd
+				)
+			),
+
+			// cancel icon for desktop mode
+			cancel: (
+				width: (
+					desktop: 30px
+				),
+				padding: (
+					desktop: 0 1.25rem 0 0
+				),
+				font-size: (
+					desktop: 1.3rem
+				),
+				font-color: (
+					desktop: #64688d
+				)
+			),
+			// close icon for mobile mode
+			close: (
+				width: (
+					mobile: 30px
+				),
+				padding: (
+					mobile: 0 35px 0 0
+				),
+				font-size: (
+					mobile: 1.3rem
+				),
+				font-color: (
+					mobile:  #bcc0cd
+				)
+			)
+		),
+
+		// spinner 
+		spinner: (
+			color: #282a3c,
+			right: (
+				desktop: 10px,
+				mobile: 10px
+			)
+		)
+	)
+);

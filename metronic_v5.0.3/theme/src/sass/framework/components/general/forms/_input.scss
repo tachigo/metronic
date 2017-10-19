@@ -1,0 +1,342 @@
+//
+//** Input Component
+//
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component--input-base() {
+    // base input
+    .form-control  {
+        font-family: #{array-get($m--forms, input, layout, self, font-family)};
+
+        &.m-input--pill {
+            @include border-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+        }
+
+        &.m-input--square {
+            @include border-radius(0);
+        }
+
+        &.m-input--fixed {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, default, fixed);
+        }
+
+        &.m-input--fixed-large {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, large, fixed);
+        }
+
+        &.m-input--fixed-small {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, small, fixed);
+        }           
+    }
+
+    // input group
+    .input-group {
+        // addon
+        .input-group-addon {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: array-get($m--forms, input-group, layout, addon, padding, x);
+            padding-right: array-get($m--forms, input-group, layout, addon, padding, x);
+            align-items: center;
+            justify-content: center;
+
+            // checkbox/radio
+            .m-checkbox,
+            .m-radio {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        // default icon sizing
+        .input-group-addon { 
+            @include icons-size( array-get($m--forms, input, layout, icon, default, font-size) );
+        }
+
+        // large icon sizing
+        &.input-group-lg {
+            .input-group-addon { 
+                @include icons-size( array-get($m--forms, input, layout, icon, large, font-size) );
+            }
+        }
+
+        // small icon sizing
+        &.input-group-lg {
+            .input-group-addon { 
+                @include icons-size( array-get($m--forms, input, layout, icon, small, font-size) );
+            }
+        }
+
+        // fixed width input groups
+        &.m-input-group--fixed {
+            width: array-get($m--forms, input, layout, self, size, default, fixed);
+        }
+
+        &.m-input-group--fixed-large {
+            width: array-get($m--forms, input, layout, self, size, large, fixed);
+        }
+
+        &.m-input-group--fixed-small {
+            width: array-get($m--forms, input, layout, self, size, small, fixed);
+        }   
+
+        // squre style
+        &.m-input-group--square {
+            @include border-radius(0);
+           
+            > .form-control:first-child,
+            > span:first-child,
+            > span:first-child > .btn {
+                @include border-radius(0);
+            }
+
+            > .form-control:last-child,
+            > span:last-child,
+            > span:last-child > .btn {  
+                @include border-radius(0);
+            }
+        }
+
+        // pill style
+        &.m-input-group--pill {
+            @include border-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+           
+            > .form-control:first-child,
+            > span:first-child,
+            > span:first-child > .btn {
+                @include border-top-left-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+                @include border-bottom-left-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+            }
+
+            > .form-control:last-child,
+            > span:last-child,
+            > span:last-child > .btn {  
+                @include border-top-right-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+                @include border-bottom-right-radius(array-get($m--forms, input, layout, self, size, default, pill-radius));
+            }
+        }
+    }
+
+    // input icon
+    .m-input-icon {
+        position: relative;
+        padding: 0;
+        width: 100%;
+
+        // icon input sizing
+        > .m-input-icon__icon {
+            position: absolute;
+            height: 100%;
+            display: inline-block;
+            text-align: center;
+            top: 0;
+            width: array-get($m--forms, input, layout, icon, default, width);
+
+            &.m-input-icon__icon--left {
+                left: 0;
+            }
+
+            &.m-input-icon__icon--right {
+                right: 0;
+            }
+
+            > span {
+                display: table;
+                height: 100%;
+                width: 100%;
+
+                > i {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 0;
+                }
+            }
+
+            // set icon sizes
+            @include icons-size( array-get($m--forms, input, layout, icon, default, font-size) );
+        }
+
+        .form-control.form-control-lg ~ .m-input-icon__icon {
+            width: array-get($m--forms, input, layout, icon, large, width);
+
+            // set icon sizes
+            @include icons-size( array-get($m--forms, input, layout, icon, large, font-size) );
+        }
+
+        .form-control.form-control-sm ~ .m-input-icon__icon {
+            width: array-get($m--forms, input, layout, icon, small, width);
+
+            // set icon sizes
+            @include icons-size( array-get($m--forms, input, layout, icon, small, font-size) );
+        }
+
+        // icon input alignments
+        &.m-input-icon--left {
+            .form-control {
+                padding-left: array-get($m--forms, input, layout, icon, default, width);
+
+                &.form-control-lg {
+                    padding-left: array-get($m--forms, input, layout, icon, large, width);
+                }
+
+                &.form-control-sm {
+                    padding-left: array-get($m--forms, input, layout, icon, small, width);
+                }
+            }
+        }
+
+        &.m-input-icon--right {
+            .form-control {
+                padding-right: array-get($m--forms, input, layout, icon, default, width);
+
+                &.form-control-lg {
+                    padding-right: array-get($m--forms, input, layout, icon, large, width);
+                }
+
+                &.form-control-sm {
+                    padding-right: array-get($m--forms, input, layout, icon, small, width);
+                }
+            }
+        }
+
+        // fixed width icon inputs        
+        &.m-input-icon--fixed {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, default, fixed);
+        }
+
+        &.m-input-icon--fixed-large {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, large, fixed);
+        }
+
+        &.m-input-icon--fixed-small {
+            display: inline-block;
+            width: array-get($m--forms, input, layout, self, size, small, fixed);
+        }  
+    }
+}
+
+//== Component Skin
+@mixin m-build-component--input-skin($config, $skin) {
+    @include component-skin(form-control, $skin) {
+        // default input style
+
+        &[readonly],
+        & {
+            border-color: array-get($config, input, skins, $skin, default, border, default);
+            color: array-get($config, input, skins, $skin, default, color, default);
+            @include input-placeholder(array-get($config, input, skins, $skin, default, color, placeholder));
+        }
+
+        &[readonly] {
+            background-color: transparent;
+        }
+       
+        &:focus {
+            border-color: array-get($config, input, skins, $skin, default, border, focus);
+            color: array-get($config, input, skins, $skin, default, color, focus);
+        }
+
+        &[disabled] {
+            border-color: array-get($config, input, skins, $skin, default, border, disabled);
+            color: array-get($config, input, skins, $skin, default, color, disabled);
+            background-color: array-get($config, input, skins, $skin, default, bg, disabled);
+        }
+
+        // solid input style
+        &.m-input--solid {
+            background-color: array-get($config, input, skins, $skin, solid, bg, default);
+            border-color: array-get($config, input, skins, $skin, solid, border, default);
+            color: array-get($config, input, skins, $skin, solid, color, default);
+            @include input-placeholder(array-get($config, input, skins, $skin, solid, color, placeholder));
+
+            &:focus {
+                background-color: array-get($config, input, skins, $skin, solid, bg, focus);
+                border-color: array-get($config, input, skins, $skin, solid, border, focus);
+                color: array-get($config, input, skins, $skin, solid, color, focus);
+            }
+
+            &[disabled] {
+                border-color: array-get($config, input, skins, $skin, solid, border, disabled);
+                color: array-get($config, input, skins, $skin, solid, color, disabled);
+                background-color: array-get($config, input, skins, $skin, solid, bg, disabled); 
+            }
+        }
+
+        &.m-input--air {
+            @include shadow( array-get($config, input, skins, $skin, air, box-shadow, default) );
+
+            &:focus {
+                @include shadow( array-get($config, input, skins, $skin, air, box-shadow, focus));
+            }
+        }
+    }
+
+    @include component-skin(input-group, $skin) {        
+        .input-group-addon {
+            color: get-color($skin, regular);
+            border-color: array-get($config, input, skins, $skin, default, border, default);
+            background-color: lighten(array-get($config, input, skins, $skin, default, border, default), 3%);
+
+            > i {
+                color: get-color($skin, icon, '+++');
+            }
+        }
+
+        .input-group-btn {
+            > .btn.btn-secondary {
+                border-color: array-get($config, input, skins, $skin, default, border, default);
+            }
+        }
+
+        &.m-input-group--air {
+            @include shadow( array-get($config, input, skins, $skin, air, box-shadow, default) );
+        }
+
+        &.m-input-group--solid {
+            .form-control {
+                border-color: array-get($config, input, skins, $skin, default, border, default);
+                background-color: lighten(array-get($config, input, skins, $skin, default, border, default), 3%);
+
+                color: array-get($config, input, skins, $skin, solid, color, default);
+                @include input-placeholder(array-get($config, input, skins, $skin, solid, color, placeholder));
+
+                &:focus {
+                    background-color: array-get($config, input, skins, $skin, solid, bg, focus);
+                    border-color: array-get($config, input, skins, $skin, solid, border, focus);
+                    color: array-get($config, input, skins, $skin, solid, color, focus);
+                }
+
+                &[disabled] {
+                    border-color: array-get($config, input, skins, $skin, solid, border, disabled);
+                    color: array-get($config, input, skins, $skin, solid, color, disabled);
+                    background-color: array-get($config, input, skins, $skin, solid, bg, disabled);
+                }
+            }
+        }
+    }
+
+    @include component-skin(m-input-icon, $skin) {
+        .m-input-icon__icon i {
+            color: get-color($skin, icon, '+++');
+        }
+    }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component--input-base();
+
+//== Component Skin - Light
+@include m-build-component--input-skin($m--forms, light);
+
+//== Component Skin - Dark
+@include m-build-component--input-skin($m--forms, dark);

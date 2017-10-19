@@ -1,0 +1,309 @@
+//
+//** Topbar
+//
+
+//== Base
+@mixin m-build-topbar-nav-base($layout) {
+    //== General mode
+    .m-topbar {
+        width: auto;
+        height: 100%;
+        float:right;
+        padding: array-get($layout, default, self, padding, desktop);
+        @include transition(all array-get($layout, default, self, transition-time, push) ease);
+
+        &.m-topbar--pushed {
+             @include transition(all array-get($layout, default, self, transition-time, push) ease);
+        }
+
+        //== Topbar nav
+        .m-topbar__nav.m-nav  {   
+            margin: array-get($layout, default, nav, self, margin, desktop);
+
+            // nav item
+            > .m-nav__item {
+                padding: array-get($layout, default, nav, item, self, padding, desktop);
+
+                > .m-nav__link {
+                    position: relative;
+                    margin: 0 auto;
+                    padding: 0;
+
+                    .m-nav__link-badge {
+                        left: 50%;
+                        margin-left: -2px;
+                        position: absolute;
+                        z-index: 2;
+                        top:  array-get($layout, default, nav, item, link, badge, top, desktop);    
+                    }
+
+                    // nav item link's icon part
+                    .m-nav__link-icon {
+                        text-align: array-get($layout, default, nav, item, link, icon, align);
+                        line-height: 0;
+                        vertical-align: middle;
+                        padding: 0;
+
+                        .m-nav__link-icon-wrapper {
+                            display: inline-block;
+                            width: array-get($layout, default, nav, item, link, icon, size);
+                            height: array-get($layout, default, nav, item, link, icon, size);
+                            @include border-radius(50%);
+                            @include vertical-horizontal-center-flexbox();  
+
+                            > i {                  
+                                @include border-radius(50%);
+                                font-size: array-get($layout, default, nav, item, link, icon, font-size, desktop);
+
+                                color: array-get($layout, default, nav, item, link, icon, font-color, desktop, default);
+
+                                .m-header--minimize-on & {
+                                    color: array-get($layout, default, nav, item, link, icon, font-color, desktop, minimize);
+                                }
+                            }
+                        }
+
+                        &.m-nav__link-icon--active,
+                        &:hover {
+                            .m-nav__link-icon-wrapper {
+                                 background: array-get($layout, default, nav, item, link, icon, bg-hover, desktop, default);
+
+                                .m-header--minimize-on & {
+                                    background: array-get($layout, default, nav, item, link, icon, bg-hover, desktop, minimize);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.m-topbar__user-profile {
+                    > .m-nav__link {
+                         // welcome
+                        .m-topbar__welcome {
+                            display: table-cell;
+                            vertical-align: middle;
+                            font-size: array-get($layout, default, nav, item, link, user, welcome, font-size);
+                            font-weight: array-get($layout, default, nav, item, link, user, welcome, font-weight);
+                            text-align: array-get($layout, default, nav, item, link, user, welcome, align);
+                            color: array-get($layout, default, nav, item, link, user, welcome, font-color, desktop, default);
+
+                            .m-header--minimize-on & {
+                                color: array-get($layout, default, nav, item, link, user, welcome, font-color, desktop, minimize);
+                            }
+                        }
+
+                        // username
+                        .m-topbar__username {
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-transform: array-get($layout, default, nav, item, link, user, username, font-transform);
+                            font-size: array-get($layout, default, nav, item, link, user, username, font-size);
+                            font-weight: array-get($layout, default, nav, item, link, user, username, font-weight);
+                            text-align: array-get($layout, default, nav, item, link, user, username, align);
+
+                            //== link with underline effect
+                            .m-link {
+                                @include m-set-component--typography-link-color(
+                                    array-get($layout, default, nav, item, link, user, username, font-color, desktop, default, default), 
+                                    array-get($layout, default, nav, item, link, user, username, font-color, desktop, default, hover)
+                                );
+                            }                            
+
+                            .m-header--minimize-on & {
+                                //== link with underline effect
+                                .m-link {
+                                    @include m-set-component--typography-link-color(
+                                        array-get($layout, default, nav, item, link, user, username, font-color, desktop, minimize, default), 
+                                        array-get($layout, default, nav, item, link, user, username, font-color, desktop, minimize, hover)
+                                    );
+                                }
+                            }
+                        }
+
+                        // userpic
+                        .m-topbar__userpic {
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-align: center;
+                            margin: 0 auto;
+
+                            img {
+                                display: block;
+                                vertical-align: middle;
+                                max-width: array-get($layout, default, nav, item, link, user, userpic, max-width, desktop) !important;
+                                margin: array-get($layout, default, nav, item, link, user, userpic, margin);
+                            }                    
+                        }  
+                    }
+                }
+
+                &.m-dropdown.m-dropdown--offcanvas.m-dropdown--header-bg-fil.m-dropdown--arrow { 
+                    @include m-component--dropdown--set-arrow-color(array-get($layout, default, self, bg-color), bottom); 
+                }
+
+                &.m-topbar__notifications.m-topbar__notifications--img {
+                    @include m-component--dropdown--set-arrow-color( array-get($layout, default, nav, dropdown, notifications, bg-color) );
+                }
+
+                &.m-topbar__quick-actions.m-topbar__quick-actions--img {
+                    @include m-component--dropdown--set-arrow-color( array-get($layout, default, nav, dropdown, quick-actions, bg-color) );
+                }
+
+                &.m-topbar__user-profile.m-topbar__user-profile--img {
+                    @include m-component--dropdown--set-arrow-color( array-get($layout, default, nav, dropdown, user-profile, bg-color) );
+                }
+            }
+        }
+    }
+
+    //== Minimal desktop
+    @include minimal-desktop {
+        //== Topbar
+        .m-topbar {
+            padding: array-get($layout, default, self, padding, min-desktop);
+
+            //== Topbar nav
+            .m-topbar__nav.m-nav  {
+                margin: array-get($layout, default, nav, self, margin, min-desktop);
+
+                > .m-nav__item {
+                    padding: array-get($layout, default, nav, item, self, padding, min-desktop);
+                }
+            }
+        }
+    }
+
+    //== Mobile & tablet mode
+    @include tablet-and-mobile {
+        //== Topbar
+        .m-topbar {
+            //== Topbar base
+            @include transition(array-get($layout, toggle, transition));
+            @include shadow(array-get($layout, toggle, box-shadow));
+
+            position: relative;
+            width: 100% !important;
+            padding: array-get($layout, default, self, padding, mobile);
+            height: array-get($layout, toggle, height, mobile) !important;
+            margin-top: -(array-get($layout, toggle, height, mobile));         
+            background-color: array-get($layout, toggle, bg-color); 
+            opacity:0;
+
+            .m-topbar--on & {
+                @include transition(array-get($layout, toggle, transition));
+                margin-top: 0;     
+                z-index: 1;   
+                opacity:1;  
+            } 
+
+            .m-header--fixed-mobile & {
+                margin-top: 0; 
+                top: -(array-get($layout, toggle, height, mobile)); 
+            }
+
+            .m-header--fixed-mobile.m-topbar--on & {
+                margin-top: 0; 
+                top: 0;
+                @include transition(array-get($layout, toggle, transition));                   
+            }
+
+            //== Topbar nav
+            .m-topbar__nav.m-nav  {
+                margin: array-get($layout, default, nav, self, margin, mobile);
+                float: right;
+
+                // nav item
+                > .m-nav__item {
+                    padding: array-get($layout, default, nav, item, self, padding, mobile);
+
+                    &.m-topbar__user-profile {
+                        padding-right:  array-get($layout, default, nav, item, link, user, self, padding-left, mobile);
+                    }
+
+                    > .m-nav__link {
+                        .m-nav__link-badge {
+                            top: array-get($layout, default, nav, item, link, badge, top, mobile);    
+                        }
+
+                        // nav item link's icon part
+                        .m-nav__link-icon {
+                            .m-nav__link-icon-wrapper {
+                                > i {                    
+                                    color: array-get($layout, default, nav, item, link, icon, font-color, mobile);
+                                    font-size: array-get($layout, default, nav, item, link, icon, font-size, mobile);
+                                }
+                            }
+
+                            &.m-nav__link-icon--active,
+                            &:hover {
+                                .m-nav__link-icon-wrapper {
+                                    background: array-get($layout, default, nav, item, link, icon, bg-hover, mobile);
+                                }
+                            }
+
+                            &.m-nav__link-icon--aside-toggle {
+                                .m-nav__link-icon-wrapper {
+                                    > i {                    
+                                        color: array-get($layout, default, nav, item, link, aside-toggle-icon, font-color, mobile);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.m-topbar__user-profile {
+                        > .m-nav__link {
+                             // welcome
+                            .m-topbar__welcome {
+                                color: array-get($layout, default, nav, item, link, user, welcome, font-color, mobile);
+                            }
+
+                            // username
+                            .m-topbar__username {
+                                color: array-get($layout, default, nav, item, link, user, username, font-color, mobile, default);
+                            }
+
+                            &:hover {
+                                .m-topbar__username {
+                                    color: array-get($layout, default, nav, item, link, user, username, font-color, mobile, hover);
+                                }
+                            }
+
+                            // userpic
+                            .m-topbar__userpic {
+                                img {
+                                    max-width: array-get($layout, default, nav, item, link, user, userpic, max-width, mobile) !important;
+                                }                    
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //== Mobile mode
+    @include mobile {
+        .m-topbar {
+            .m-topbar__nav.m-nav  {
+                > .m-nav__item.m-dropdown { 
+                    position: static;
+                }
+
+                > .m-nav__item {
+                    &.m-topbar__user-profile {
+                        > .m-nav__link {
+                            // welcome
+                            .m-topbar__welcome {
+                                display: none;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}
+
+//== Build
+@include m-build-topbar-nav-base( array-get($m-config-header, topbar ) );

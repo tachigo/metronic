@@ -1,0 +1,157 @@
+//
+//** Brand
+//
+
+@mixin m-build-brand-base($layout) {	
+	//== General Mode
+	.m-brand {
+		@include transition(array-get($m-config-aside, aside-left, self, minimize, transition));
+		height: array-get($m-config-header, header, self, default, height, desktop);		
+		width: array-get($layout, self, width, default);	
+		padding: array-get($layout, self, padding, desktop); 
+		background: array-get($m-config-header, header, top, bg-color);
+
+		//== Brand hidden mode
+		.m-brand--hidden & {
+			display: none;
+		}
+		
+		//== Brand logo
+		.m-brand__logo {
+			vertical-align: middle;
+			line-height: 0;
+
+			.m-brand__logo-wrapper {
+				display: inline-block;
+
+				img {
+					@include transition(array-get($m-config-header, header, self, transition, general));
+				}
+
+				.m-header--minimize-on & {
+					img {
+						max-height: array-get($m-config-header, brand, logo, height, minimize);
+						@include transition(array-get($m-config-header, header, self, transition, hide));
+					}
+				}
+			}			
+		}
+
+		//== Brand tool
+		.m-brand__tools {
+			line-height: 0;
+			vertical-align: middle;
+			text-align: right;
+
+			//== Toggler
+			@include m-build--toggler(m-brand__toggler, array-get($layout, tools, toggler)); 
+			.m-brand__toggler {
+				@include m-customize--toggler-color(m-brand__toggler, array-get($layout, tools, toggler, color)); 
+			}
+
+			//== Icon
+			.m-brand__icon {
+				display: inline-block;
+				line-height: 0;
+				vertical-align: middle;
+				cursor: pointer;
+
+				> i {
+					color: array-get($layout, tools, icon, color, default);
+					font-size: array-get($layout, tools, icon, font-size);
+				}
+
+				&:hover {
+					text-decoration: none;
+
+					> i {
+						color: array-get($layout, tools, icon, color, hover);						
+					}
+				}
+
+			}
+
+			//== Dropdown
+			.m-dropdown {
+				margin-left: 40px;
+
+				.btn {
+					border-color: #f7f7fb;
+					color: #9099b1;
+					background: #f7f7fb;
+					padding: 0.9rem 1.5rem 0.9rem 1.5rem;					
+
+					> span {
+						display: inline-block;
+						padding-right: 2rem; 
+					}
+
+					&:focus,
+					&:hover {
+						background: get-brand-color();
+						border-color: get-brand-color();
+						color: get-brand-inverse-color();
+					}
+				}
+			}
+		}	
+	}
+
+	//== Table & Mobile Mode
+	@include tablet-and-mobile {
+		.m-brand {
+			width: 100%;
+			position: relative;
+			height: array-get($m-config-header, header, self, height, mobile) !important;			
+			//padding: array-get($m-config-base, page, wrapper, padding, mobile);
+			padding: array-get($layout, self, padding, mobile); 
+			z-index: 3; 
+
+			> .m-stack {
+				width: 100% !important;
+			}
+
+			.m-brand__tools {	
+				width: 100%;
+							
+				.m-brand__icon {
+					margin-left: array-get($layout, tools, self, space, mobile);
+
+					.flaticon-more {
+						position: relative;
+						top: 1px;
+					}
+				}
+
+				//== Dropdown
+				.m-dropdown {
+					margin-left: 20px;
+					margin-right: 10px;
+
+					.btn {
+						border-color: #f7f7fb;
+						color: #9099b1;
+						background: #f7f7fb;
+						padding: 0.5 1rem 0.5 1rem;
+
+						> span {
+							display: inline-block;
+							padding-right: 0; 
+						}
+
+						&:focus,
+						&:hover {
+							background: get-brand-color();
+							border-color: get-brand-color();
+							color: get-brand-inverse-color();
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//== Build Brand Base
+@include m-build-brand-base( array-get($m-config-header, brand ) );

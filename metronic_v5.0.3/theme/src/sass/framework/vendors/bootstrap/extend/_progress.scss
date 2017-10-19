@@ -1,0 +1,34 @@
+//
+//** Progress Customization
+// 
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component--progress-base() {
+    //== Base
+    .progress {	
+        .progress-bar {
+            @include transition(all 0.5s ease);
+        }    
+
+        &.m-progress--sm {
+        	.progress-bar {
+        		height: 6px;
+        		@include border-radius(3px);
+        	}        	
+        }
+
+        &.m-progress--lg {
+        	.progress-bar {
+        		height: 20px;
+        		@include border-radius(4px);
+        	}        	
+        }
+    }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component--progress-base();

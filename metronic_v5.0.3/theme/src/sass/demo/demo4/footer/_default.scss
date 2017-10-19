@@ -1,0 +1,110 @@
+//
+//** Footer
+//
+
+//== Footer Base
+@mixin m-build-footer-default-base() {
+	$base_font_color: #f0f0f0;
+
+    //== General mode
+    .m-footer {
+    	padding: 0.4rem 0;
+
+		.m-footer__copyright {
+			font-size: get-font-size(regular);
+			font-weight: get-font-weight(normal);
+			color: darken($base_font_color, 10%);
+
+			.m-link {
+				@include m-set-component--typography-link-color($base_font_color, lighten($base_font_color, 20%));
+			}
+		}
+
+		.m-footer__nav {
+			> .m-nav__item {
+				> .m-nav__link {
+					.m-nav__link-text {
+						color: darken($base_font_color, 10%);
+					}
+
+					.m-nav__link-icon {
+						color: darken($base_font_color, 10%);
+					}
+				}
+
+				&:hover {
+					> .m-nav__link {
+						.m-nav__link-text {
+							color: lighten($base_font_color, 20%);
+						}
+
+						.m-nav__link-icon {
+							color: lighten($base_font_color, 20%);
+						}
+					}
+				}
+			}
+		}
+    }
+
+    //== Desktop mode
+    @include desktop {
+    	.m-footer {
+			.m-footer__wrapper {
+				margin: array-get($m-config-base, body, self, margin, desktop, boxed);
+
+				.m-page--fluid & {
+					margin: array-get($m-config-base, body, self, margin, desktop, fluid);
+				}
+			}	
+	    }
+    }	
+
+    //== Minimal desktop
+    @include minimal-desktop {
+    	.m-footer {
+    		.m-footer__nav {
+    			.m-nav__item {
+    				padding: 0 0 0 10px;
+
+    				&:first-child {
+    					padding-left: 0;	
+    				}
+    			}
+    		}
+    	}
+    }
+
+    //== Mobile & tablet mode
+    @include tablet-and-mobile {
+        .m-footer {
+        	padding: 0.5rem 0.5rem;
+
+			.m-stack__item {
+				text-align: center;
+				padding: 2px 0 2px 0;
+			}
+
+			.m-footer__nav {
+				text-align: center;
+				float: none;
+				margin: 0 auto;
+
+				.m-nav__item {
+    				padding: 0 0 0 5px;
+
+    				> .m-nav__link {
+    					padding: 4px 0;
+    				}
+    			
+    				&:first-child {
+    					padding-left: 0;	
+    				}
+    			}
+			}
+		}
+    }
+}
+
+//== Build Footer Base
+@include m-build-footer-default-base();

@@ -1,0 +1,211 @@
+//
+//** Brand
+//
+
+@mixin m-build-brand-base($layout) {	
+	//== General Mode
+	.m-brand {		
+		width: array-get($layout, self, width);	
+		padding: array-get($layout, self, padding, desktop); 
+
+		@include transition(array-get($m-config-header, header, fixed, transition));
+		height: array-get($m-config-header, header, self, height, desktop);
+
+		// fixed header mode
+		.m-header--fixed & {						
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, default, desktop);
+		}
+
+		.m-header--minimize-on & {
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, minimize, desktop);
+		}
+		
+		//== Brand logo
+		.m-brand__logo {
+			vertical-align: middle;
+			line-height: 0;
+
+			.m-brand__logo-wrapper {
+				display: inline-block;
+
+				img {
+					@include transition(array-get($m-config-header, header, self, transition, general));
+				}
+
+				.m-header--minimize-on & {
+					img {
+						max-height: array-get($m-config-header, brand, logo, height, minimize);
+						@include transition(array-get($m-config-header, header, self, transition, hide));
+					}
+				}
+			}			
+		}
+
+		//== Brand tool
+		.m-brand__tools {
+			line-height: 0;
+			vertical-align: middle;
+			text-align: right;
+
+			//== Toggler
+			@include m-build--toggler(m-brand__toggler, array-get($layout, tools, toggler)); 
+
+			.m-brand__toggler {
+				@include m-customize--toggler-color(m-brand__toggler, array-get($layout, tools, toggler, color, default)); 
+
+				.m-header--minimize-on &,
+				.m-header--mobile-minimize-on & {
+					@include m-customize--toggler-color(m-brand__toggler, array-get($layout, tools, toggler, color, minimize)); 
+				}
+			}
+
+			//== Icon
+			.m-brand__icon {
+				display: inline-block;
+				line-height: 0;
+				vertical-align: middle;
+				cursor: pointer;
+
+				> i {
+					color: array-get($layout, tools, icon, color, default, default);
+					font-size: array-get($layout, tools, icon, font-size);
+				}
+
+				&:hover {
+					text-decoration: none;
+
+					> i {
+						color: array-get($layout, tools, icon, color, default, hover);						
+					}
+				}
+
+				.m-header--minimize-on &,
+				.m-header--mobile-minimize-on & {
+					> i {
+						color: array-get($layout, tools, icon, color, minimize, default);
+					}
+
+					&:hover {
+						color: array-get($layout, tools, icon, color, minimize, hover);	
+					}
+				}
+			}
+
+			//== Dropdown
+			.m-dropdown {
+				margin: array-get($layout, tools, dropdown, margin, desktop);
+
+				.btn {
+					padding: array-get($layout, tools, dropdown, btn, padding, desktop);
+					
+					background: array-get($layout, tools, dropdown, btn, bg-color, default, default);
+					border-color: array-get($layout, tools, dropdown, btn, border-color, default, default);
+					color: array-get($layout, tools, dropdown, btn, color, default, default);
+
+					&:after {
+						color: array-get($layout, tools, dropdown, btn, color, default, default);
+					}
+
+					> span {
+						display: inline-block;
+						padding-right: 2rem; 
+					}
+
+					&:hover {
+						background: array-get($layout, tools, dropdown, btn, bg-color, default, hover);
+						border-color: array-get($layout, tools, dropdown, btn, border-color, default, hover);
+						color: array-get($layout, tools, dropdown, btn, color, default, hover);
+					}
+
+					&:focus {
+						//border-color: array-get($layout, tools, dropdown, btn, border-color, default, hover);
+						//@include shadow('none');
+					}
+				}
+
+				.m-header--minimize-on &,
+				.m-header--mobile-minimize-on & {
+					.btn {						
+						background: array-get($layout, tools, dropdown, btn, bg-color, minimize, default);
+						border-color: array-get($layout, tools, dropdown, btn, border-color, minimize, default);
+						color: array-get($layout, tools, dropdown, btn, color, minimize, default);
+
+						&:after {
+							color: array-get($layout, tools, dropdown, btn, color, minimize, default);
+						}
+
+						&:hover {
+							background: array-get($layout, tools, dropdown, btn, bg-color, minimize, hover);
+							border-color: array-get($layout, tools, dropdown, btn, border-color, minimize, hover);
+							color: array-get($layout, tools, dropdown, btn, color, minimize, hover);
+
+							&:after {
+								color: array-get($layout, tools, dropdown, btn, color, minimize, hover);
+							}
+						}
+
+						&:focus {
+							//border-color: array-get($layout, tools, dropdown, btn, border-color, minimize, hover);
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	//== Table & Mobile Mode
+	@include tablet-and-mobile {
+		.m-brand {
+			width: 100%;
+			position: relative;		
+			padding: array-get($layout, self, padding, mobile); 
+			z-index: 3; 
+
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, self, height, mobile);
+
+			// fixed header mode
+			.m-header--fixed-mobile & {						
+				@include transition(array-get($m-config-header, header, fixed, transition));
+				height: array-get($m-config-header, header, fixed, height, default, mobile);
+			}
+
+			.m-header--mobile-minimize-on & {
+				@include transition(array-get($m-config-header, header, fixed, transition));
+				height: array-get($m-config-header, header, fixed, height, minimize, mobile);
+			}
+
+			.m-brand__tools {	
+				width: 100%;
+							
+				.m-brand__icon {
+					margin-left: array-get($layout, tools, self, space, mobile);
+
+					.flaticon-more {
+						position: relative;
+						top: 1px;
+					}
+				}
+
+				//== Dropdown
+				.m-dropdown {
+					margin: array-get($layout, tools, dropdown, margin, mobile);
+
+					.btn {
+						padding: array-get($layout, tools, dropdown, btn, padding, mobile);
+
+						> span {
+							padding-right: 0; 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//== Build Brand Base
+@include m-build-brand-base( array-get($m-config-header, brand ) );

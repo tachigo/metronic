@@ -1,0 +1,111 @@
+//
+//** Aside Left
+//
+
+@mixin m-build-aside-left-base($layout) {
+	//== Generak markup
+	.m-aside-left {
+		background-color: array-get($layout, self, default, bg-color, desktop);
+		@include transition(array-get($layout, self, minimize, transition));
+		width: array-get($layout, self, default, width);	
+	}
+
+	@include desktop {		
+		.m-aside-left--minimize {
+			.m-aside-left {
+				width: array-get($layout, self, minimize, width);
+				@include transition(array-get($layout, self, minimize, transition));
+			}
+		}
+
+		.m-aside-left--fixed {
+			// aside left
+			.m-aside-left {
+				@include transition(array-get($layout, self, minimize, transition));
+				top: array-get($m-config-header, header, self, height, desktop, top, default) + array-get($m-config-header, header, self, height, desktop, bottom);
+				bottom:0;
+				position:fixed;
+				height: auto !important;
+				z-index: array-get($layout, self, fixed, zindex);
+				@include fix-fixed-position-lags();		
+
+				//== Custome custom scroller
+				@include m-component--scrollable-skin(array-get($layout, self, fixed, scroller, color, default) , array-get($layout, self, fixed, scroller, color, drag));
+
+				.mCSB_scrollTools {
+					right: array-get($layout, self, fixed, scroller, right);
+				}
+
+				.mCustomScrollBox,
+				.mCSB_container {
+					overflow: visible !important;
+				}
+			}
+
+			&.m-page--fluid {
+				.m-aside-left {
+					left: array-get($m-config-base, page, container, padding, fluid, x, desktop);
+				}
+			}
+
+			&.m-header--minimize-on {
+				.m-aside-left {
+					@include transition(array-get($layout, self, minimize, transition));
+					top: array-get($m-config-header, header, self, height, desktop, top, minimize);	
+				}			
+			}
+
+			// fixed header
+			&.m-header--static,
+			&.m-header--fixed {
+				.m-aside-left {
+					top: array-get($m-config-header, header, self, default, height, desktop); 
+				}
+			}
+
+			// fixed and hidable header's hidden mode
+			&.m-header--fixed.m-header--fixed-hidable.m-header--hide {
+				.m-aside-left {
+					@include transition(array-get($m-config-header, header, self, fixed, hidable, transition-hide));
+					top: array-get($m-config-header, header, self, fixed, minimize, height, desktop);
+				}
+			}
+
+			// fixed and hidable header's shown mode
+			&.m-header--fixed.m-header--fixed-hidable.m-header--show {
+				.m-aside-left {
+					@include transition(array-get($m-config-header, header, self, fixed, hidable, transition-show));
+					top: array-get($m-config-header, header, self, fixed, minimize, height, desktop);
+				}
+			}
+
+			// wide layout mode
+			&.m-page--wide {
+				.m-body {
+					padding-left: 0;
+				}
+			}
+
+			// minimized left aside
+			&.m-aside-left--minimize {
+				.m-body {
+					@include transition(array-get($layout, self, minimize, transition));
+					padding-left: array-get($layout, self, minimize, width);
+				} 
+			}
+		}	
+	}
+
+	@include tablet-and-mobile {
+		.m-aside-left {
+			background-color: array-get($layout, self, default, bg-color, mobile);
+		}
+	}
+}
+
+
+//== Build Aside Left Base
+@include m-build-aside-left-base( array-get($m-config-aside, aside-left ) );
+
+//== Build Aside Left Offcanvas
+@include m-generate-component--offcanvas(m-aside-left, tablet-and-mobile, array-get($m-config-aside, aside-left, self, offcanvas, tablet-and-mobile) ); 

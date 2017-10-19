@@ -1,0 +1,85 @@
+//
+//** Header
+//
+
+//== Desktop Mode
+@include desktop {	
+	.m-header {		
+		@include transition(array-get($m-config-header, header, fixed, transition));
+		height: array-get($m-config-header, header, self, height, desktop);
+
+		.m-topbar {
+			height: array-get($m-config-header, header, self, height, desktop);
+		}
+
+		.m-header__wrapper {
+			padding: array-get($m-config-header, header, self, padding, desktop);
+			margin: array-get($m-config-base, body, self, margin, desktop, boxed);
+
+			.m-page--fluid & {
+				margin: array-get($m-config-base, body, self, margin, desktop, fluid);
+			}
+		}
+
+		// fixed header mode
+		.m-header--fixed & {						
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, default, desktop);
+			position: fixed;			
+			z-index: array-get($m-config-header, header, fixed, zindex);
+			top: 0;
+			left: 0;
+			right: 0;   
+
+			.m-topbar {
+				height: array-get($m-config-header, header, fixed, height, default, desktop);
+			}
+		}
+
+		.m-header--minimize-on & {
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, minimize, desktop);
+
+			.m-header__wrapper {
+				background: array-get($m-config-header, header, fixed, bg-color, minimize);
+				@include shadow(array-get($m-config-header, header, fixed, shadow, minimize));
+			}
+
+			.m-topbar {
+				height: array-get($m-config-header, header, fixed, height, minimize, desktop);
+			}
+		}
+	}
+}
+
+
+//== Mobile Mode
+@include tablet-and-mobile {
+	.m-header {		
+		height: array-get($m-config-header, header, self, height, mobile) !important;
+
+		.m-header__wrapper {
+			padding: 0;
+
+			.m-page--fluid & {
+				padding: 0;
+			}			
+		}
+
+		.m-header--fixed-mobile & {
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, default, mobile);
+			z-index: array-get($m-config-header, header, fixed, zindex);	
+			position: fixed;
+			top: 0;  
+			right: 0;  
+		} 
+
+		.m-header--mobile-minimize-on & {
+			@include transition(array-get($m-config-header, header, fixed, transition));
+			height: array-get($m-config-header, header, fixed, height, minimize, mobile);
+			background: array-get($m-config-header, header, fixed, bg-color, minimize);			
+			@include shadow(array-get($m-config-header, header, fixed, shadow, minimize));
+		}
+	}
+}

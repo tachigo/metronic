@@ -1,0 +1,155 @@
+//
+//** Header
+//
+
+//== General Mode
+.m-header {
+	.m-header__top {
+		background: array-get($m-config-header, header, top, bg-color);
+	}
+}
+
+//== Desktop Mode
+@include desktop {	
+	.m-header {		
+		@include transition(array-get($m-config-header, header, self, transition, general));
+		@include shadow(get-shadow(dark, '-'));
+
+		.m-header__top {
+			padding: array-get($m-config-header, header, self, padding, desktop);
+			position: relative;
+			z-index: 2;			
+			height: array-get($m-config-header, header, self, height, desktop, top, default);
+			@include transition(array-get($m-config-header, header, self, transition, general));
+			@include fix-fixed-position-lags();
+		}
+
+		.m-header__bottom {
+			padding: array-get($m-config-header, header, self, padding, desktop);
+			position: relative;
+			z-index: 1;
+			background: array-get($m-config-header, header, bottom, bg-color);
+			height: array-get($m-config-header, header, self, height, desktop, bottom);
+			@include transition(array-get($m-config-header, header, self, transition, general));
+			@include fix-fixed-position-lags();
+		}
+
+		// fixed header mode
+		.m-header--fixed & {
+			@include fix-fixed-position-lags();
+			z-index: array-get($m-config-header, header, self, fixed, zindex);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;   
+		}
+
+		// fixed header hidable mode
+		.m-header--fixed.m-header--hide & {
+			@include transition(array-get($m-config-header, header, self, transition, hide));
+			@include transform(translateY(-100%));
+		}
+
+		.m-header--fixed.m-header--show & {
+			@include transition(array-get($m-config-header, header, self, transition, general));
+			@include transform(translateY(0));
+		}
+
+		// fixed header semi-hidable mode
+		.m-header--fixed.m-header--minimize-on & {			
+			@include transition(array-get($m-config-header, header, self, transition, hide));
+			height: array-get($m-config-header, header, self, height, desktop, top, minimize);
+			@include shadow(get-shadow(light, '-'));
+
+			.m-header__top {
+				@include transition(array-get($m-config-header, header, self, transition, hide));
+				height: array-get($m-config-header, header, self, height, desktop, top, minimize);
+			}
+
+			.m-header__bottom {
+				@include transition(array-get($m-config-header, header, self, transition, hide));
+				@include transform(translateY(-100%));
+			}
+		}
+
+		.m-header--fixed.m-header--minimize-off & {
+			@include transition(array-get($m-config-header, header, self, transition, hide));
+			height:
+			array-get($m-config-header, header, self, height, desktop, top, default) + 
+			array-get($m-config-header, header, self, height, desktop, bottom);
+
+			.m-header__top {
+				@include transition(array-get($m-config-header, header, self, transition, general));
+				height: array-get($m-config-header, header, self, height, desktop, top, default);
+			}
+
+			.m-header__bottom {
+				@include transition(array-get($m-config-header, header, self, transition, general));
+				@include transform(translateY(0));
+			}
+		}
+	}
+}
+
+//== Mobile Mode
+@include tablet-and-mobile {
+	.m-header {		
+		height: array-get($m-config-header, header, self, height, mobile) !important;
+		@include shadow(get-shadow(light, '-'));
+
+		.m-header__top {
+			height: array-get($m-config-header, header, self, height, mobile);
+
+			.m-container {
+				padding: 0;
+			}
+		}
+
+		.m-header__bottom {
+			.m-container {
+				padding: 0;
+			}
+		}
+
+		.m-page__wrapper {
+			padding: 0;
+
+			.m-page--fluid & {
+				padding: 0;
+			}			
+		}
+
+		// header nav
+		.m-header__nav {
+			top: -100%;
+			position: relative;
+		}
+
+		> .m-container > .m-grid {
+			height: array-get($m-config-header, header, self, mobile, mobile);
+			> .m-grid__col {
+				height: array-get($m-config-header, header, self, mobile, mobile);
+			}
+		}
+
+		.m-header--fixed-mobile & {
+			@include fix-fixed-position-lags();
+			z-index: array-get($m-config-header, header, self, fixed, zindex);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;   
+		}
+
+		// fixed header hidable mode
+		.m-header--fixed-mobile.m-header--fixed-mobile-hidable.m-header--hide & {
+			@include transition(array-get($m-config-header, header, self, transition, hide));
+			@include transform(translateY(-100%));
+		}
+
+		.m-header--fixed-mobile.m-header--fixed-mobile-hidable.m-header--show & {
+			@include transition(array-get($m-config-header, header, self, transition, general));
+			@include transform(translateY(0));
+		}
+	}
+}

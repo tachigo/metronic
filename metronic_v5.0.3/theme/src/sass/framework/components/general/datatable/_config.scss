@@ -1,0 +1,185 @@
+//
+//** Datatable Component Config
+//
+
+$m--config-component--datatable: (
+	default: (
+		table: (
+			scroll: (
+				dragger: (
+					bg-color: (
+						default: rgba(0,0,0,0.2),
+						reverse: rgba(0,0,0,0.2)
+					)
+				)
+			),
+			border: (
+				default: 1px solid #eee,
+				reverse: 1px solid #fff
+			),
+			head: (
+				row: (
+					bg-color: (
+						default: #999,
+						reverse: #333
+					),
+					cell: (
+						border: (
+							default: 1px solid #eee,
+							reverse: 1px solid #fff
+						),
+						padding: 5px 10px,
+						bg-color: (
+							default: (
+								initial: #999,
+								ordered: #333
+							),
+							reverse: (
+								initial: #999,
+								ordered: #333
+							),
+						),
+						caption:(
+							text: (
+								font-color: (
+									default: (
+										initial: #999,
+										hover: #333,
+										active: #333
+									),
+									reverse: (
+										initial: #999,
+										hover: #333,
+										active: #333
+									)
+								),
+								font-size: 0.9rem,
+								text-transform: uppercase,
+								font-weight: 600 
+							),
+							icon: (
+								font-color: (
+									default: (
+										initial: #999,
+										hover: #333,
+										active: #333
+									),
+									reverse: (
+										initial: #999,
+										hover: #333,
+										active: #333
+									)
+								),
+								font-size: 0.8rem
+							) 
+						),					
+						order-icon: (
+							font-color: (
+								default: (
+									initial: #999,
+									hover: #333,
+									ordered: #333
+								),
+								reverse: (
+									initial: #999,
+									hover: #333,
+									ordered: #333
+								)
+							),
+							font-size: 0.8rem
+						) 
+					)
+				)
+			),
+			body: (
+				row: (
+					bg-color: (
+						default: (
+							initial: #999,
+							hover: #333,
+							active: #333,
+							selected: #333
+						),
+						reverse: (
+							initial: #999,
+							hover: #333,
+							active: #333,
+							selected: #333
+						),
+					),
+					cell: (
+						padding: 5px 10px,
+						border: (
+							default: 1px solid #eee,
+							reverse: 1px solid #fff
+						),
+						bg-color: (
+							default: (
+								initial: #999,
+								ordered: #333
+							),
+							reverse: (
+								initial: #999,
+								ordered: #333
+							),
+						),
+						caption:(
+							text: (
+								font-color: (
+									default: (
+										initial: #999,
+										hover: #333,
+										ordered: #333,
+										selected: #333
+									),
+									reverse: (
+										initial: #999,
+										hover: #333,
+										ordered: #333,
+										selected: #333
+									)
+								),
+								font-size: 0.9rem,
+								text-transform: uppercase,
+								font-weight: 600 
+							)
+						)
+					)
+				)
+			),
+			foot: (
+				row: (
+					bg-color: (
+						default: #999,
+						reverse: #999
+					),
+					cell: (
+						padding: 5px 10px,
+						border: (
+							default: 1px solid #eee,
+							reverse: 1px solid #fff
+						),
+						bg-color: (
+							default: #999,
+							reverse: #333
+						),
+						caption:(
+							text: (
+								font-color: (
+									default: #999,
+									reverse: #333
+								),
+								font-size: 0.9rem,
+								text-transform: uppercase,
+								font-weight: 600 
+							)
+						)
+					)
+				)
+			)
+		),
+		navbar: (
+			
+		)
+	)
+);

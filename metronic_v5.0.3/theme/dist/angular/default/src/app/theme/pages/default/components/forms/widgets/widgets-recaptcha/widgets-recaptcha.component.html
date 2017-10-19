@@ -1,0 +1,222 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				Google reCaptcha
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Forms
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Form Widgets
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Google reCaptcha
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+				<a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+					<i class="la la-plus m--hide"></i>
+					<i class="la la-ellipsis-h"></i>
+				</a>
+				<div class="m-dropdown__wrapper">
+					<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+					<div class="m-dropdown__inner">
+						<div class="m-dropdown__body">
+							<div class="m-dropdown__content">
+								<ul class="m-nav">
+									<li class="m-nav__section m-nav__section--first m--hide">
+										<span class="m-nav__section-text">
+											Quick Actions
+										</span>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-share"></i>
+											<span class="m-nav__link-text">
+												Activity
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-chat-1"></i>
+											<span class="m-nav__link-text">
+												Messages
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-info"></i>
+											<span class="m-nav__link-text">
+												FAQ
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-lifebuoy"></i>
+											<span class="m-nav__link-text">
+												Support
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator m-nav__separator--fit"></li>
+									<li class="m-nav__item">
+										<a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+											Submit
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<!--begin::Portlet-->
+	<div class="m-portlet">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						Google reCaptcha Examples
+					</h3>
+				</div>
+			</div>
+		</div>
+		<!--begin::Form-->
+		<form class="m-form m-form--fit m-form--label-align-right">
+			<div class="m-portlet__body">
+				<div class="form-group m-form__group row">
+					<label class="col-form-label col-lg-3 col-sm-12">
+						Google reCaptcha 1
+					</label>
+					<div class="col-lg-4 col-md-9 col-sm-12">
+						<re-captcha class="g-recaptcha" siteKey="6LdnLwgUAAAAAAIb9L3PQlHQgvSCi16sYgbMIMFR"></re-captcha>
+						<div class="m-form__help">
+							To learn more about Google reCaptcha please visit
+							<a class="m-link" href="http://www.google.com/recaptcha" >
+								http://www.google.com/recaptcha
+							</a>
+						</div>
+					</div>
+					<script src='https://www.google.com/recaptcha/api.js'></script>
+				</div>
+				<div class="form-group m-form__group row">
+					<label class="col-form-label col-lg-3 col-sm-12">
+						Google reCaptcha 2
+					</label>
+					<div class="col-lg-4 col-md-9 col-sm-12">
+						<!--begin: GOOGLE REPCAPTCHA -->
+						<div id="recaptcha_widget" class="m-recaptcha">
+							<div class="m-recaptcha__img">
+								<a id="recaptcha_image" href="javascript:;"></a>
+								<div class="recaptcha_only_if_incorrect_sol display-none">
+									Incorrect please try again
+								</div>
+							</div>
+							<div class="input-group">
+								<input type="text" class="form-control" id="recaptcha_response_field" name="recaptcha_response_field">
+								<span class="input-group-btn">
+									<a class="btn btn-secondary" href="javascript:Recaptcha.reload()">
+										<i class="la la-refresh"></i>
+									</a>
+								</span>
+								<span class="input-group-btn">
+									<a class="btn btn-secondary recaptcha_only_if_image" href="javascript:Recaptcha.switch_type('audio')">
+										<i title="Get an audio CAPTCHA" class="la la-headphones"></i>
+									</a>
+								</span>
+								<span class="input-group-btn">
+									<a class="btn btn-secondary recaptcha_only_if_audio" href="javascript:Recaptcha.switch_type('image')">
+										<i title="Get an image CAPTCHA" class="la la-picture-o"></i>
+									</a>
+								</span>
+								<span class="input-group-btn">
+									<a class="btn btn-secondary" href="javascript:Recaptcha.showhelp()">
+										<i class="la la-question-circle"></i>
+									</a>
+								</span>
+							</div>
+							<div class="m-form__help">
+								<span class="recaptcha_only_if_image">
+									Enter the words above
+								</span>
+								<span class="recaptcha_only_if_audio">
+									Enter the numbers you hear
+								</span>
+							</div>
+						</div>
+						<div class="m-form__help">
+							<span class="label label-sm label-danger">
+								Note:&nbsp;
+							</span>
+							Please visit
+							<a class="m-link"  href="http://www.google.com/recaptcha" >
+								http://www.google.com/recaptcha
+							</a>
+							to learn more about the Google reCaptcha
+						</div>
+						<script type="text/javascript">
+							 						var RecaptchaOptions = { 					    	theme : 'custom', 					    	custom_theme_widget: 'recaptcha_widget' 					    }; 					
+						</script>
+						<script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6LcrK9cSAAAAALEcjG9gTRPbeA0yAVsKd8sBpFpR"></script>
+						<!--end: GOOGLE REPCAPTCHA -->
+					</div>
+				</div>
+			</div>
+			<div class="m-portlet__foot m-portlet__foot--fit">
+				<div class="m-form__actions m-form__actions">
+					<div class="row">
+						<div class="col-lg-9 ml-lg-auto">
+							<button type="reset" class="btn btn-brand">
+								Submit
+							</button>
+							<button type="reset" class="btn btn-secondary">
+								Cancel
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!--end::Form-->
+	</div>
+	<!--end::Portlet-->
+</div>

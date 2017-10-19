@@ -1,0 +1,73 @@
+//
+//** Body
+// Page body container
+
+//== General Mode
+
+.m-body {	
+	overflow: hidden;  
+
+	.m-content {
+		padding: array-get($m-config-base, body, content, padding, desktop, y) array-get($m-config-base, body, content, padding, desktop, x);
+	}
+
+	//== Fix fluid flex box item hor overflow issue
+	.m-wrapper {
+		width: 100%;
+	}
+}
+
+//== Desktop Mode
+@include desktop {
+	.m-body {	
+		// fixed header mode
+		.m-header--fixed & {			
+			padding-top: 
+			array-get($m-config-header, header, self, height, desktop, top, default) +
+			array-get($m-config-header, header, self, height, desktop, bottom)  !important;
+		}
+
+		// body wrapper
+		.m-wrapper {
+			.m-aside-left--fixed & {
+				margin-left: $m-aside-left-width;
+			}		
+
+			.m-page--fluid.m-aside-left--fixed & { 
+				margin-left: 0;
+			}
+
+			.m-aside-left--enabled & {
+				@include shadow(array-get($m-config-base, body, wrapper, shadow));
+				padding-left: array-get($m-config-base, body, wrapper, space);
+			}
+
+			.m-aside-right--enabled & {
+				padding-right: array-get($m-config-base, body, wrapper, space);
+			}
+		}
+
+		// fixed aside left
+		.m-page--fluid.m-aside-left--fixed.m-aside-left--enabled & {
+			@include transition(array-get($m-config-aside, aside-left, self, minimize, transition));
+			padding-left: 
+				array-get($m-config-aside, aside-left, self, default, width) + 
+				array-get($m-config-base, page, container, padding, fluid, x, desktop) !important;
+		}
+	}
+}
+
+// Tablet & Mobile Mode
+@include tablet-and-mobile {
+	.m-body {
+		// fixed header mode
+		.m-header--fixed-mobile & { 
+			padding-top: array-get($m-config-header, header, self, height, mobile);  
+		}
+
+		// body content
+		.m-content {
+			padding: array-get($m-config-base, body, content, padding, mobile, y) array-get($m-config-base, body, content, padding, mobile, x);	
+		}
+	}
+}

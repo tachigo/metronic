@@ -1,0 +1,260 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				Popover
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Base
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Popover
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+				<a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+					<i class="la la-plus m--hide"></i>
+					<i class="la la-ellipsis-h"></i>
+				</a>
+				<div class="m-dropdown__wrapper">
+					<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+					<div class="m-dropdown__inner">
+						<div class="m-dropdown__body">
+							<div class="m-dropdown__content">
+								<ul class="m-nav">
+									<li class="m-nav__section m-nav__section--first m--hide">
+										<span class="m-nav__section-text">
+											Quick Actions
+										</span>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-share"></i>
+											<span class="m-nav__link-text">
+												Activity
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-chat-1"></i>
+											<span class="m-nav__link-text">
+												Messages
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-info"></i>
+											<span class="m-nav__link-text">
+												FAQ
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-lifebuoy"></i>
+											<span class="m-nav__link-text">
+												Support
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator m-nav__separator--fit"></li>
+									<li class="m-nav__item">
+										<a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+											Submit
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Basic Examples
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							Basic Usage
+						</h3>
+						<span class="m-section__sub">
+							Click below button to toggle popover:
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-danger" data-toggle="m-popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+								Click me
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							Directions
+						</h3>
+						<span class="m-section__sub">
+							Four direction options are available: top, right, bottom, and left aligned:
+						</span>
+						<div class="m-section__content m-demo-buttons">
+							<button type="button" class="btn btn-brand" data-container="body" data-toggle="m-popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Popover on top
+							</button>
+							<button type="button" class="btn btn-primary" data-container="body" data-toggle="m-popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Popover on right
+							</button>
+							<button type="button" class="btn btn-warning" data-container="body" data-toggle="m-popover" data-placement="bottom" data-content="Vivamus                         sagittis lacus vel augue laoreet rutrum faucibus.">
+								Popover on bottom
+							</button>
+							<button type="button" class="btn btn-success" data-container="body" data-toggle="m-popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Popover on left
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							Dismiss on next click
+						</h3>
+						<span class="m-section__sub">
+							Use the focus trigger to dismiss popovers on the next click that the user makes.
+						</span>
+						<div class="m-section__content">
+							<a tabindex="0" class="btn btn-success" role="button" data-toggle="m-popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
+								Dismissible popover
+							</a>
+						</div>
+					</div>
+					<!--end::Section-->
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Advanced Examples
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							HTML Content
+						</h3>
+						<span class="m-section__sub">
+							Insert HTML into the popover:
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-primary" data-toggle="m-popover" data-trigger="focus" title="Popover title" data-html="true" data-content="And here's some amazing <b>HTML</b> content. It's very <code>engaging</code>. Right?">
+								Click me
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							Offset
+						</h3>
+						<span class="m-section__sub">
+							Offset of the popover relative to its target. For more information refer to
+							<a class="m-link" href="http://tether.io/#offset" >
+								Tether's offset docs.
+							</a>
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-brand" data-container="body" data-trigger="focus" data-offset="20px 20px" data-toggle="m-popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Example 1
+							</button>
+							<button type="button" class="btn btn-success" data-container="body" data-trigger="focus" data-offset="-20px -20px" data-toggle="m-popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Example 2
+							</button>
+							<button type="button" class="btn btn-danger" data-container="body" data-trigger="focus" data-offset="60px 0px" data-toggle="m-popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+								Example 3
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<!--begin::Section-->
+					<div class="m-section">
+						<h3 class="m-section__heading">
+							Skin
+						</h3>
+						<span class="m-section__sub">
+							Use
+							<code>
+							data-skin="light"
+						</code>
+						or
+						<code>
+						data-skin="dark"
+					</code>
+					parameters to set popover skin. Default skin is light.
+				</span>
+				<div class="m-section__content">
+					<button type="button" class="btn btn-brand" data-trigger="focus"  data-toggle="m-popover" data-placement="top" title="Default light skin" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						Light skin
+					</button>
+					<button type="button" class="btn btn-success" data-trigger1="focus"  data-skin="dark" data-toggle="m-popover" data-placement="top" title="Dark skin" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+						Dark skin
+					</button>
+				</div>
+			</div>
+			<!--end::Section-->
+		</div>
+	</div>
+	<!--end::Portlet-->
+</div>
+</div>
+</div>

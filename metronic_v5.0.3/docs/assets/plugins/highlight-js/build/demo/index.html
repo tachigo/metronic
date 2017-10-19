@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>highlight.js demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perfect-scrollbar.min.css">
+
+  <link rel="stylesheet" title="Default" href="styles/default.css">
+  
+  <link rel="alternate stylesheet" title="Agate" href="styles\agate.css">
+  
+  <link rel="alternate stylesheet" title="Androidstudio" href="styles\androidstudio.css">
+  
+  <link rel="alternate stylesheet" title="Arduino Light" href="styles\arduino-light.css">
+  
+  <link rel="alternate stylesheet" title="Arta" href="styles\arta.css">
+  
+  <link rel="alternate stylesheet" title="Ascetic" href="styles\ascetic.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Cave Dark" href="styles\atelier-cave-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Cave Light" href="styles\atelier-cave-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Dune Dark" href="styles\atelier-dune-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Dune Light" href="styles\atelier-dune-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Estuary Dark" href="styles\atelier-estuary-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Estuary Light" href="styles\atelier-estuary-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Forest Dark" href="styles\atelier-forest-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Forest Light" href="styles\atelier-forest-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Heath Dark" href="styles\atelier-heath-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Heath Light" href="styles\atelier-heath-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Lakeside Dark" href="styles\atelier-lakeside-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Lakeside Light" href="styles\atelier-lakeside-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Plateau Dark" href="styles\atelier-plateau-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Plateau Light" href="styles\atelier-plateau-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Savanna Dark" href="styles\atelier-savanna-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Savanna Light" href="styles\atelier-savanna-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Seaside Dark" href="styles\atelier-seaside-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Seaside Light" href="styles\atelier-seaside-light.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Sulphurpool Dark" href="styles\atelier-sulphurpool-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atelier Sulphurpool Light" href="styles\atelier-sulphurpool-light.css">
+  
+  <link rel="alternate stylesheet" title="Atom One Dark" href="styles\atom-one-dark.css">
+  
+  <link rel="alternate stylesheet" title="Atom One Light" href="styles\atom-one-light.css">
+  
+  <link rel="alternate stylesheet" title="Brown Paper" href="styles\brown-paper.css">
+  
+  <link rel="alternate stylesheet" title="Codepen Embed" href="styles\codepen-embed.css">
+  
+  <link rel="alternate stylesheet" title="Color Brewer" href="styles\color-brewer.css">
+  
+  <link rel="alternate stylesheet" title="Darcula" href="styles\darcula.css">
+  
+  <link rel="alternate stylesheet" title="Dark" href="styles\dark.css">
+  
+  <link rel="alternate stylesheet" title="Darkula" href="styles\darkula.css">
+  
+  <link rel="alternate stylesheet" title="Docco" href="styles\docco.css">
+  
+  <link rel="alternate stylesheet" title="Dracula" href="styles\dracula.css">
+  
+  <link rel="alternate stylesheet" title="Far" href="styles\far.css">
+  
+  <link rel="alternate stylesheet" title="Foundation" href="styles\foundation.css">
+  
+  <link rel="alternate stylesheet" title="Github Gist" href="styles\github-gist.css">
+  
+  <link rel="alternate stylesheet" title="Github" href="styles\github.css">
+  
+  <link rel="alternate stylesheet" title="Googlecode" href="styles\googlecode.css">
+  
+  <link rel="alternate stylesheet" title="Grayscale" href="styles\grayscale.css">
+  
+  <link rel="alternate stylesheet" title="Gruvbox Dark" href="styles\gruvbox-dark.css">
+  
+  <link rel="alternate stylesheet" title="Gruvbox Light" href="styles\gruvbox-light.css">
+  
+  <link rel="alternate stylesheet" title="Hopscotch" href="styles\hopscotch.css">
+  
+  <link rel="alternate stylesheet" title="Hybrid" href="styles\hybrid.css">
+  
+  <link rel="alternate stylesheet" title="Idea" href="styles\idea.css">
+  
+  <link rel="alternate stylesheet" title="Ir Black" href="styles\ir-black.css">
+  
+  <link rel="alternate stylesheet" title="Kimbie Dark" href="styles\kimbie.dark.css">
+  
+  <link rel="alternate stylesheet" title="Kimbie Light" href="styles\kimbie.light.css">
+  
+  <link rel="alternate stylesheet" title="Magula" href="styles\magula.css">
+  
+  <link rel="alternate stylesheet" title="Mono Blue" href="styles\mono-blue.css">
+  
+  <link rel="alternate stylesheet" title="Monokai Sublime" href="styles\monokai-sublime.css">
+  
+  <link rel="alternate stylesheet" title="Monokai" href="styles\monokai.css">
+  
+  <link rel="alternate stylesheet" title="Obsidian" href="styles\obsidian.css">
+  
+  <link rel="alternate stylesheet" title="Ocean" href="styles\ocean.css">
+  
+  <link rel="alternate stylesheet" title="Paraiso Dark" href="styles\paraiso-dark.css">
+  
+  <link rel="alternate stylesheet" title="Paraiso Light" href="styles\paraiso-light.css">
+  
+  <link rel="alternate stylesheet" title="Pojoaque" href="styles\pojoaque.css">
+  
+  <link rel="alternate stylesheet" title="Purebasic" href="styles\purebasic.css">
+  
+  <link rel="alternate stylesheet" title="Qtcreator Dark" href="styles\qtcreator_dark.css">
+  
+  <link rel="alternate stylesheet" title="Qtcreator Light" href="styles\qtcreator_light.css">
+  
+  <link rel="alternate stylesheet" title="Railscasts" href="styles\railscasts.css">
+  
+  <link rel="alternate stylesheet" title="Rainbow" href="styles\rainbow.css">
+  
+  <link rel="alternate stylesheet" title="Routeros" href="styles\routeros.css">
+  
+  <link rel="alternate stylesheet" title="School Book" href="styles\school-book.css">
+  
+  <link rel="alternate stylesheet" title="Solarized Dark" href="styles\solarized-dark.css">
+  
+  <link rel="alternate stylesheet" title="Solarized Light" href="styles\solarized-light.css">
+  
+  <link rel="alternate stylesheet" title="Sunburst" href="styles\sunburst.css">
+  
+  <link rel="alternate stylesheet" title="Tomorrow Night Blue" href="styles\tomorrow-night-blue.css">
+  
+  <link rel="alternate stylesheet" title="Tomorrow Night Bright" href="styles\tomorrow-night-bright.css">
+  
+  <link rel="alternate stylesheet" title="Tomorrow Night Eighties" href="styles\tomorrow-night-eighties.css">
+  
+  <link rel="alternate stylesheet" title="Tomorrow Night" href="styles\tomorrow-night.css">
+  
+  <link rel="alternate stylesheet" title="Tomorrow" href="styles\tomorrow.css">
+  
+  <link rel="alternate stylesheet" title="Vs" href="styles\vs.css">
+  
+  <link rel="alternate stylesheet" title="Vs 2015" href="styles\vs2015.css">
+  
+  <link rel="alternate stylesheet" title="Xcode" href="styles\xcode.css">
+  
+  <link rel="alternate stylesheet" title="Xt 256" href="styles\xt256.css">
+  
+  <link rel="alternate stylesheet" title="Zenburn" href="styles\zenburn.css">
+  
+</head>
+<body>
+  <div id="sidebar">
+
+    <div id="header">
+      <h1><a href="https://highlightjs.org/">highlight.js</a> demo</h1>
+    </div>
+
+    <div id="lists">
+      <div>
+        <h2>Language categories</h2>
+        <ul id="categories"></ul>
+      </div>
+
+      <div>
+        <h2>Styles</h2>
+        <ul id="styles"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="content">
+
+  <div id="languages">
+    
+    
+    <div class="common config">
+      <h2>Apache</h2>
+      <pre><code class="apache"># rewrite&#96;s rules for wordpress pretty url
+LoadModule rewrite_module  modules/mod_rewrite.so
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [NC,L]
+
+ExpiresActive On
+ExpiresByType application/x-javascript  &quot;access plus 1 days&quot;
+
+Order Deny,Allow
+Allow from All
+
+&lt;Location /maps/&gt;
+  RewriteMap map txt:map.txt
+  RewriteMap lower int:tolower
+  RewriteCond %{REQUEST_URI} ^/([^/.]+)\.html$ [NC]
+  RewriteCond ${map:${lower:%1}|NOT_FOUND} !NOT_FOUND
+  RewriteRule .? /index.php?q=${map:${lower:%1}} [NC,L]
+&lt;/Location&gt;
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Bash</h2>
+      <pre><code class="bash">#!/bin/bash
+
+###### CONFIG
+ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
+BE_VERBOSE=false
+
+if [ &quot;$UID&quot; -ne 0 ]
+then
+ echo &quot;Superuser rights required&quot;
+ exit 2
+fi
+
+genApacheConf(){
+ echo -e &quot;# Host ${HOME_DIR}$1/$2 :&quot;
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common scripting">
+      <h2>CoffeeScript</h2>
+      <pre><code class="coffeescript">grade = (student, period=(if b? then 7 else 6)) -&gt;
+  if student.excellentWork
+    &quot;A+&quot;
+  else if student.okayStuff
+    if student.triedHard then &quot;B&quot; else &quot;B-&quot;
+  else
+    &quot;C&quot;
+
+class Animal extends Being
+  constructor: (@name) -&gt;
+
+  move: (meters) -&gt;
+    alert @name + &quot; moved #{meters}m.&quot;
+</code></pre>
+    </div>
+    
+    
+    <div class="common system">
+      <h2>C++</h2>
+      <pre><code class="cpp">#include &lt;iostream&gt;
+
+int main(int argc, char *argv[]) {
+
+  /* An annoying &quot;Hello World&quot; example */
+  for (auto i = 0; i &lt; 0xFFFF; i++)
+    cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
+
+  char c = &#39;\n&#39;;
+  unordered_map &lt;string, vector&lt;string&gt; &gt; m;
+  m[&quot;key&quot;] = &quot;\\\\&quot;; // this is an error
+
+  return -2e3 + 12l;
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>C#</h2>
+      <pre><code class="cs">using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+    [Obsolete(&quot;...&quot;)]
+    class Program : IInterface
+    {
+        public static List&lt;int&gt; JustDoIt(int count)
+        {
+            Console.WriteLine($&quot;Hello {Name}!&quot;);
+            return new List&lt;int&gt;(new int[] { 1, 2, 3 })
+        }
+    }
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common css">
+      <h2>CSS</h2>
+      <pre><code class="css">@font-face {
+  font-family: Chunkfive; src: url(&#39;Chunkfive.otf&#39;);
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Diff</h2>
+      <pre><code class="diff">Index: languages/ini.js
+===================================================================
+--- languages/ini.js    (revision 199)
++++ languages/ini.js    (revision 200)
+@@ -1,8 +1,7 @@
+ hljs.LANGUAGES.ini =
+ {
+   case_insensitive: true,
+-  defaultMode:
+-  {
++  defaultMode: {
+     contains: [&#39;comment&#39;, &#39;title&#39;, &#39;setting&#39;],
+     illegal: &#39;[^\\s]&#39;
+   },
+
+*** /path/to/original timestamp
+--- /path/to/new      timestamp
+***************
+*** 1,3 ****
+--- 1,9 ----
++ This is an important
++ notice! It should
++ therefore be located at
++ the beginning of this
++ document!
+
+! compress the size of the
+! changes.
+
+  It is important to spell
+</code></pre>
+    </div>
+    
+    
+    <div class="common protocols">
+      <h2>HTTP</h2>
+      <pre><code class="http">POST /task?id=1 HTTP/1.1
+Host: example.org
+Content-Type: application/json; charset=utf-8
+Content-Length: 137
+
+{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;extended&quot;: true,
+  &quot;results&quot;: [
+    {&quot;value&quot;: 0, &quot;type&quot;: &quot;int64&quot;},
+    {&quot;value&quot;: 1.0e+3, &quot;type&quot;: &quot;decimal&quot;}
+  ]
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common config">
+      <h2>Ini</h2>
+      <pre><code class="ini">; boilerplate
+[package]
+name = &quot;some_name&quot;
+authors = [&quot;Author&quot;]
+description = &quot;This is \
+a description&quot;
+
+[[lib]]
+name = ${NAME}
+default = True
+auto = no
+counter = 1_000
+</code></pre>
+    </div>
+    
+    
+    <div class="common enterprise">
+      <h2>Java</h2>
+      <pre><code class="java">/**
+ * @author John Smith &lt;john.smith@example.com&gt;
+*/
+package l2f.gameserver.model;
+
+public abstract class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log(&quot;Should not be called&quot;);
+    if (1 &gt; 5) { // wtf!?
+      return;
+    }
+  }
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common scripting">
+      <h2>JavaScript</h2>
+      <pre><code class="javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             &#96; class=&quot;${cls}&quot;&#96;;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log(&#39;undefined&#39;);
+  }
+}
+
+export  $initHighlight;
+</code></pre>
+    </div>
+    
+    
+    <div class="common protocols">
+      <h2>JSON</h2>
+      <pre><code class="json">[
+  {
+    &quot;title&quot;: &quot;apples&quot;,
+    &quot;count&quot;: [12000, 20000],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  },
+  {
+    &quot;title&quot;: &quot;oranges&quot;,
+    &quot;count&quot;: [17500, null],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  }
+]
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Makefile</h2>
+      <pre><code class="makefile"># Makefile
+
+BUILDDIR      = _build
+EXTRAS       ?= $(BUILDDIR)/extras
+
+.PHONY: main clean
+
+main:
+	@echo &quot;Building main facility...&quot;
+	build_main $(BUILDDIR)
+
+clean:
+	rm -rf $(BUILDDIR)/*
+</code></pre>
+    </div>
+    
+    
+    <div class="common markup">
+      <h2>Markdown</h2>
+      <pre><code class="markdown"># hello world
+
+you can write text [with links](http://example.com) inline or [link references][1].
+
+* one _thing_ has *em*phasis
+* two __things__ are **bold**
+
+[1]: http://example.com
+
+---
+
+hello world
+===========
+
+&lt;this_is inline=&quot;xml&quot;&gt;&lt;/this_is&gt;
+
+&gt; markdown is so cool
+
+    so are code segments
+
+1. one thing (yeah!)
+2. two thing &#96;i can write code&#96;, and &#96;more&#96; wipee!
+
+</code></pre>
+    </div>
+    
+    
+    <div class="common config">
+      <h2>Nginx</h2>
+      <pre><code class="nginx">user  www www;
+worker_processes  2;
+pid /var/run/nginx.pid;
+error_log  /var/log/nginx.error_log  debug | info | notice | warn | error | crit;
+
+events {
+    connections   2000;
+    use kqueue | rtsig | epoll | /dev/poll | select | poll;
+}
+
+http {
+    log_format main      &#39;$remote_addr - $remote_user [$time_local] &#39;
+                         &#39;&quot;$request&quot; $status $bytes_sent &#39;
+                         &#39;&quot;$http_referer&quot; &quot;$http_user_agent&quot; &#39;
+                         &#39;&quot;$gzip_ratio&quot;&#39;;
+
+    send_timeout 3m;
+    client_header_buffer_size 1k;
+
+    gzip on;
+    gzip_min_length 1100;
+
+    #lingering_time 30;
+
+    server {
+        server_name   one.example.com  www.one.example.com;
+        access_log   /var/log/nginx.access_log  main;
+
+        rewrite (.*) /index.php?page=$1 break;
+
+        location / {
+            proxy_pass         http://127.0.0.1/;
+            proxy_redirect     off;
+            proxy_set_header   Host             $host;
+            proxy_set_header   X-Real-IP        $remote_addr;
+            charset            koi8-r;
+        }
+
+        location /api/ {
+            fastcgi_pass 127.0.0.1:9000;
+        }
+
+        location ~* \.(jpg|jpeg|gif)$ {
+            root         /spool/www;
+        }
+    }
+}
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Objective-C</h2>
+      <pre><code class="objectivec">#import &lt;UIKit/UIKit.h&gt;
+#import &quot;Dependency.h&quot;
+
+@protocol WorldDataSource
+@optional
+- (NSString*)worldName;
+@required
+- (BOOL)allowsToLive;
+@end
+
+@property (nonatomic, readonly) NSString *title;
+- (IBAction) show;
+@end
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Perl</h2>
+      <pre><code class="perl"># loads object
+sub load
+{
+  my $flds = $c-&gt;db_load($id,@_) || do {
+    Carp::carp &quot;Can&#96;t load (class: $c, id: $id): &#39;$!&#39;&quot;; return undef
+  };
+  my $o = $c-&gt;_perl_new();
+  $id12 = $id / 24 / 3600;
+  $o-&gt;{&#39;ID&#39;} = $id12 + 123;
+  #$o-&gt;{&#39;SHCUT&#39;} = $flds-&gt;{&#39;SHCUT&#39;};
+  my $p = $o-&gt;props;
+  my $vt;
+  $string =~ m/^sought_text$/;
+  $items = split //, &#39;abc&#39;;
+  $string //= &quot;bar&quot;;
+  for my $key (keys %$p)
+  {
+    if(${$vt.&#39;::property&#39;}) {
+      $o-&gt;{$key . &#39;_real&#39;} = $flds-&gt;{$key};
+      tie $o-&gt;{$key}, &#39;CMSBuilder::Property&#39;, $o, $key;
+    }
+  }
+  $o-&gt;save if delete $o-&gt;{&#39;_save_after_load&#39;};
+
+  # GH-117
+  my $g = glob(&quot;/usr/bin/*&quot;);
+
+  return $o;
+}
+
+__DATA__
+@@ layouts/default.html.ep
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;%= content %&gt;&lt;/body&gt;
+&lt;/html&gt;
+__END__
+
+=head1 NAME
+POD till the end of file
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>PHP</h2>
+      <pre><code class="php">require_once &#39;Zend/Uri/Http.php&#39;;
+
+namespace Location\Web;
+
+interface Factory
+{
+    static function _factory();
+}
+
+abstract class URI extends BaseURI implements Factory
+{
+    abstract function test();
+
+    public static $st1 = 1;
+    const ME = &quot;Yo&quot;;
+    var $list = NULL;
+    private $var;
+
+    /**
+     * Returns a URI
+     *
+     * @return URI
+     */
+    static public function _factory($stats = array(), $uri = &#39;http&#39;)
+    {
+        echo __METHOD__;
+        $uri = explode(&#39;:&#39;, $uri, 0b10);
+        $schemeSpecific = isset($uri[1]) ? $uri[1] : &#39;&#39;;
+        $desc = &#39;Multi
+line description&#39;;
+
+        // Security check
+        if (!ctype_alnum($scheme)) {
+            throw new Zend_Uri_Exception(&#39;Illegal scheme&#39;);
+        }
+
+        $this-&gt;var = 0 - self::$st;
+        $this-&gt;list = list(Array(&quot;1&quot;=&gt; 2, 2=&gt;self::ME, 3 =&gt; \Location\Web\URI::class));
+
+        return [
+            &#39;uri&#39;   =&gt; $uri,
+            &#39;value&#39; =&gt; null,
+        ];
+    }
+}
+
+echo URI::ME . URI::$st1;
+
+__halt_compiler () ; datahere
+datahere
+datahere */
+datahere
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Python</h2>
+      <pre><code class="python">@requires_authorization
+def somefunc(param1=&#39;&#39;, param2=0):
+    r&#39;&#39;&#39;A docstring&#39;&#39;&#39;
+    if param1 &gt; param2: # interesting
+        print &#39;Gre\&#39;ater&#39;
+    return (param2 - param1 + 1 + 0b10l) or None
+
+class SomeClass:
+    pass
+
+&gt;&gt;&gt; message = &#39;&#39;&#39;interpreter
+... prompt&#39;&#39;&#39;
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Ruby</h2>
+      <pre><code class="ruby"># The Greeter class
+class Greeter
+  def initialize(name)
+    @name = name.capitalize
+  end
+
+  def salute
+    puts &quot;Hello #{@name}!&quot;
+  end
+end
+
+g = Greeter.new(&quot;world&quot;)
+g.salute
+</code></pre>
+    </div>
+    
+    
+    <div class="css">
+      <h2>SCSS</h2>
+      <pre><code class="scss">@import &quot;compass/reset&quot;;
+
+// variables
+$colorGreen: #008000;
+$colorGreenDark: darken($colorGreen, 10);
+
+@mixin container {
+    max-width: 980px;
+}
+
+// mixins with parameters
+@mixin button($color:green) {
+    @if ($color == green) {
+        background-color: #008000;
+    }
+    @else if ($color == red) {
+        background-color: #B22222;
+    }
+}
+
+button {
+    @include button(red);
+}
+
+div,
+.navbar,
+#header,
+input[type=&quot;input&quot;] {
+    font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.row-12 &gt; [class*=&quot;spans&quot;] {
+    border-left: 1px solid #B5C583;
+}
+
+// nested definitions
+ul {
+    width: 100%;
+    padding: {
+        left: 5px; right: 5px;
+    }
+  li {
+      float: left; margin-right: 10px;
+      .home {
+          background: url(&#39;http://placehold.it/20&#39;) scroll no-repeat 0 0;
+    }
+  }
+}
+
+.banner {
+    @extend .container;
+}
+
+a {
+  color: $colorGreen;
+  &amp;:hover { color: $colorGreenDark; }
+  &amp;:visited { color: #c458cb; }
+}
+
+@for $i from 1 through 5 {
+    .span#{$i} {
+        width: 20px*$i;
+    }
+}
+
+@mixin mobile {
+  @media screen and (max-width : 600px) {
+    @content;
+  }
+}</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>Shell Session</h2>
+      <pre><code class="shell">$ echo $EDITOR
+vim
+$ git checkout master
+Switched to branch &#39;master&#39;
+Your branch is up-to-date with &#39;origin/master&#39;.
+$ git push
+Everything up-to-date
+$ echo &#39;All
+&gt; done!&#39;
+All
+done!
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>SQL</h2>
+      <pre><code class="sql">CREATE TABLE &quot;topic&quot; (
+    &quot;id&quot; serial NOT NULL PRIMARY KEY,
+    &quot;forum_id&quot; integer NOT NULL,
+    &quot;subject&quot; varchar(255) NOT NULL
+);
+ALTER TABLE &quot;topic&quot;
+ADD CONSTRAINT forum_id FOREIGN KEY (&quot;forum_id&quot;)
+REFERENCES &quot;forum&quot; (&quot;id&quot;);
+
+-- Initials
+insert into &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;)
+values (2, &#39;D&#39;&#39;artagnian&#39;);
+</code></pre>
+    </div>
+    
+    
+    <div class="scripting">
+      <h2>TypeScript</h2>
+      <pre><code class="typescript">class MyClass {
+  public static myValue: string;
+  constructor(init: string) {
+    this.myValue = init;
+  }
+}
+import fs = require(&quot;fs&quot;);
+module MyModule {
+  export interface MyInterface extends Other {
+    myProperty: any;
+  }
+}
+declare magicNumber number;
+myArray.forEach(() =&gt; { }); // fat arrow syntax
+</code></pre>
+    </div>
+    
+    
+    <div class="common">
+      <h2>HTML, XML</h2>
+      <pre><code class="xml">&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
+
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
+
+&lt;script type=&quot;application/javascript&quot;&gt;
+  function $init() {return true;}
+&lt;/script&gt;
+
+&lt;body&gt;
+  &lt;p checked class=&quot;title&quot; id=&#39;title&#39;&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;
+</code></pre>
+    </div>
+    
+  </div>
+
+  </div>
+
+  <script src="../highlight.pack.js"></script>
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="perfect-scrollbar.min.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

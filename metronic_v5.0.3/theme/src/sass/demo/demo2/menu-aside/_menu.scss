@@ -1,0 +1,57 @@
+//
+//** Aside Menus
+// Build left aside menu
+
+@include m-generate--menu-ver( $m-config-menu-aside );
+
+@include desktop {
+	.m-aside-menu {
+		.m-menu__nav {
+			> .m-menu__item {				
+				> .m-menu__link  {
+					@include border-top-left-radius(30px);
+					@include border-bottom-left-radius(30px);
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+
+				> .m-menu__submenu > .m-menu__subnav > .m-menu__item {
+					> .m-menu__link {
+				    	padding-left: 50px;
+				    	padding-right: 30px;
+					}
+
+					> .m-menu__submenu > .m-menu__subnav > .m-menu__item > .m-menu__link {
+					    padding-left: 70px; 
+					    padding-right: 30px;
+					}
+
+					> .m-menu__submenu > .m-menu__subnav > .m-menu__item > .m-menu__submenu > .m-menu__item > .m-menu__link {
+					    padding-left: 90px; 				    
+					    padding-right: 30px;
+					}
+				}
+			}
+
+			> .m-menu__section {
+				padding-left: 30px;
+			}
+		}
+	}
+}
+
+@include tablet-and-mobile {
+	.m-aside-menu {
+		background: #fff;
+
+		.m-menu__nav {
+			padding-top: 0;
+			
+			> .m-menu__item {				
+				> .m-menu__link  {
+					
+				}
+			}
+		}
+	}
+}

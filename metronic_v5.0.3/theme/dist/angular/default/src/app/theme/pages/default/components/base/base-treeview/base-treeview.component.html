@@ -1,0 +1,280 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				Treeview
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Base
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Tree View
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+				<a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+					<i class="la la-plus m--hide"></i>
+					<i class="la la-ellipsis-h"></i>
+				</a>
+				<div class="m-dropdown__wrapper">
+					<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+					<div class="m-dropdown__inner">
+						<div class="m-dropdown__body">
+							<div class="m-dropdown__content">
+								<ul class="m-nav">
+									<li class="m-nav__section m-nav__section--first m--hide">
+										<span class="m-nav__section-text">
+											Quick Actions
+										</span>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-share"></i>
+											<span class="m-nav__link-text">
+												Activity
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-chat-1"></i>
+											<span class="m-nav__link-text">
+												Messages
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-info"></i>
+											<span class="m-nav__link-text">
+												FAQ
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-lifebuoy"></i>
+											<span class="m-nav__link-text">
+												Support
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator m-nav__separator--fit"></li>
+									<li class="m-nav__item">
+										<a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+											Submit
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Basic Tree
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_1" class="tree-demo">
+						<ul>
+							<li>
+								Root node 1
+								<ul>
+									<li data-jstree='{ "selected" : true }'>
+										<a href="javascript:;">
+											Initially selected
+										</a>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-briefcase m--font-success " }'>
+										custom icon URL
+									</li>
+									<li data-jstree='{ "opened" : true }'>
+										initially open
+										<ul>
+											<li data-jstree='{ "disabled" : true }'>
+												Disabled Node
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												Another node
+											</li>
+										</ul>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-warning m--font-danger" }'>
+										Custom icon class (bootstrap)
+									</li>
+								</ul>
+							</li>
+							<li data-jstree='{ "type" : "file" }'>
+								<a href="http://www.keenthemes.com">
+									Clickanle link node
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="alert alert-success m--margin-top-10">
+						Note! Opened and selected nodes will be saved in the user's browser, so when returning to the same tree the previous state will be restored.
+					</div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Custom Icons & Clickable Nodes
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_2" class="tree-demo">
+						<ul>
+							<li>
+								Root node 1
+								<ul>
+									<li data-jstree='{ "selected" : true }'>
+										<a href="javascript:;">
+											Initially selected
+										</a>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-briefcase m--font-success " }'>
+										custom icon URL
+									</li>
+									<li data-jstree='{ "opened" : true }'>
+										initially open
+										<ul>
+											<li data-jstree='{ "disabled" : true }'>
+												Disabled Node
+											</li>
+											<li data-jstree='{ "type" : "file" }'>
+												Another node
+											</li>
+										</ul>
+									</li>
+									<li data-jstree='{ "icon" : "fa fa-warning m--font-danger" }'>
+										Custom icon class (bootstrap)
+									</li>
+								</ul>
+							</li>
+							<li data-jstree='{ "type" : "file" }'>
+								<a href="http://www.jstree.com">
+									Clickanle link node
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Checkable Tree
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_3" class="tree-demo"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Contextual Menu
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_4" class="tree-demo"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Drag & Drop
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_5" class="tree-demo"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Ajax Data
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<div id="m_tree_6" class="tree-demo"></div>
+					<div class="alert alert-info m--margin-top-10">
+						Note! The tree nodes are loaded from server side demo script via ajax.
+					</div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+	</div>
+</div>

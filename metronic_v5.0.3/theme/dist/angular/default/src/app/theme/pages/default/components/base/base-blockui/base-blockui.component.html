@@ -1,0 +1,481 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				BlockUI
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Base
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					-
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Block UI
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+				<a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+					<i class="la la-plus m--hide"></i>
+					<i class="la la-ellipsis-h"></i>
+				</a>
+				<div class="m-dropdown__wrapper">
+					<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+					<div class="m-dropdown__inner">
+						<div class="m-dropdown__body">
+							<div class="m-dropdown__content">
+								<ul class="m-nav">
+									<li class="m-nav__section m-nav__section--first m--hide">
+										<span class="m-nav__section-text">
+											Quick Actions
+										</span>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-share"></i>
+											<span class="m-nav__link-text">
+												Activity
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-chat-1"></i>
+											<span class="m-nav__link-text">
+												Messages
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-info"></i>
+											<span class="m-nav__link-text">
+												FAQ
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__item">
+										<a href="" class="m-nav__link">
+											<i class="m-nav__link-icon flaticon-lifebuoy"></i>
+											<span class="m-nav__link-text">
+												Support
+											</span>
+										</a>
+									</li>
+									<li class="m-nav__separator m-nav__separator--fit"></li>
+									<li class="m-nav__item">
+										<a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+											Submit
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-xl-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Basic Examples
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<span class="m-section__sub">
+							Click below buttons to block below content area:
+						</span>
+						<div class="m-section__content">
+							<p style="padding: 20px; margin: 10px 0 30px 0; border: 4px solid #efefef" id="m_blockui_1_content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inceptos imperdiet magna! Sed fusce fames tempus litora venenatis ad: Ac aliquet leo hendrerit taciti viverra? Nisl suscipit potenti accumsan quis ipsum purus cursus. Suspendisse ultrices morbi in purus lectus dictum porta; Commodo penatibus nec.
+							</p>
+							<button type="button" class="btn btn-success" id="m_blockui_1_1">
+								Default
+							</button>
+							<button type="button" class="btn btn-brand" id="m_blockui_1_2">
+								Overlay color
+							</button>
+							<button type="button" class="btn btn-primary" id="m_blockui_1_3">
+								Custom spinner
+							</button>
+							<button type="button" class="btn btn-info" id="m_blockui_1_4">
+								Custom text 1
+							</button>
+							<button type="button" class="btn btn-danger" id="m_blockui_1_5">
+								Custom text 2
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Modal Blocking
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<span class="m-section__sub">
+							Click below buttons to block modal content:
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#m_blockui_4_1_modal">
+								Default
+							</button>
+							<button type="button" class="btn btn-brand" data-toggle="modal" data-target="#m_blockui_4_2_modal">
+								Overlay color
+							</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_blockui_4_3_modal">
+								Custom spinner
+							</button>
+							<button type="button" class="btn btn-info" data-toggle="modal" data-target="#m_blockui_4_4_modal">
+								Custom text 1
+							</button>
+							<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#m_blockui_4_5_modal">
+								Custom text 2
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+		<div class="col-xl-6">
+			<!--begin::Portlet-->
+			<div class="m-portlet" id="m_blockui_2_portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Portlet Blocking
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<span class="m-section__sub">
+							Click below buttons to block this portlet:
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-success" id="m_blockui_2_1">
+								Default
+							</button>
+							<button type="button" class="btn btn-brand" id="m_blockui_2_2">
+								Overlay color
+							</button>
+							<button type="button" class="btn btn-primary" id="m_blockui_2_3">
+								Custom spinner
+							</button>
+							<button type="button" class="btn btn-info" id="m_blockui_2_4">
+								Custom text 1
+							</button>
+							<button type="button" class="btn btn-danger" id="m_blockui_2_5">
+								Custom text 2
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+			<!--begin::Portlet-->
+			<div class="m-portlet">
+				<div class="m-portlet__head">
+					<div class="m-portlet__head-caption">
+						<div class="m-portlet__head-title">
+							<h3 class="m-portlet__head-text">
+								Page Blocking
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="m-portlet__body">
+					<!--begin::Section-->
+					<div class="m-section">
+						<span class="m-section__sub">
+							Click below buttons to block current page:
+						</span>
+						<div class="m-section__content">
+							<button type="button" class="btn btn-success" id="m_blockui_3_1">
+								Default
+							</button>
+							<button type="button" class="btn btn-brand" id="m_blockui_3_2">
+								Overlay color
+							</button>
+							<button type="button" class="btn btn-primary" id="m_blockui_3_3">
+								Custom spinner
+							</button>
+							<button type="button" class="btn btn-info" id="m_blockui_3_4">
+								Custom text 1
+							</button>
+							<button type="button" class="btn btn-danger" id="m_blockui_3_5">
+								Custom text 2
+							</button>
+						</div>
+					</div>
+					<!--end::Section-->
+					<div class="m-separator m-separator--dashed"></div>
+				</div>
+			</div>
+			<!--end::Portlet-->
+		</div>
+	</div>
+	<!--begin::Modal-->
+	<div class="modal fade" id="m_blockui_4_1_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New message
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="form-control-label">
+								Recipient:
+							</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="form-control-label">
+								Message:
+							</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal"  >
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" id="m_blockui_4_1">
+						Block modal
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end::Modal-->
+	<!--begin::Modal-->
+	<div class="modal fade" id="m_blockui_4_2_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New message
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="form-control-label">
+								Recipient:
+							</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="form-control-label">
+								Message:
+							</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" id="m_blockui_4_2">
+						Block modal
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end::Modal-->
+	<!--begin::Modal-->
+	<div class="modal fade" id="m_blockui_4_3_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New message
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="form-control-label">
+								Recipient:
+							</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="form-control-label">
+								Message:
+							</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" id="m_blockui_4_3">
+						Block modal
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end::Modal-->
+	<!--begin::Modal-->
+	<div class="modal fade" id="m_blockui_4_4_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New message
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="form-control-label">
+								Recipient:
+							</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="form-control-label">
+								Message:
+							</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" id="m_blockui_4_4">
+						Block modal
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end::Modal-->
+	<!--begin::Modal-->
+	<div class="modal fade" id="m_blockui_4_5_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						New message
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="form-control-label">
+								Recipient:
+							</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="form-control-label">
+								Message:
+							</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary" id="m_blockui_4_5">
+						Block modal
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end::Modal-->
+</div>

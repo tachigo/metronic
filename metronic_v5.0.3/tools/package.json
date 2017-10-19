@@ -1,0 +1,48 @@
+{
+  "name": "metronic-v5.0",
+  "version": "5.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap-timepicker": "^0.5.2",
+    "clipboard": "^1.7.1",
+    "gulp-filter": "^5.0.1",
+    "handlebars": "4.0.10",
+    "jquery-validation": "^1.16.0",
+    "popper.js": "1.9.3",
+    "prismjs": "^1.6.0"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-bundle-assets": "^2.28.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-rewrite-css": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "lazypipe": "^1.0.1",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.1.0",
+    "stream-series": "^0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/shuxer/metronic-v5.x.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/shuxer/metronic-v5.x#readme"
+}

@@ -1,0 +1,148 @@
+//
+//** Asides Configs
+//
+
+
+$m-config-aside: (		
+	//== Left Aside
+	aside-left: (
+		// aside itself
+		self: (
+			// default layout
+			default: (
+				width: $m-aside-left-width,
+				bg-color: (
+					desktop: transparent,
+					mobile: #ffffff
+				)
+			),
+
+			offcanvas: (
+				// for tablet and mobile
+				tablet-and-mobile: (
+					zindex: 1001,
+					direction: left,
+					transition:	all .3s ease,
+					width: $m-aside-left-width,
+					close: (
+						layout: (
+							size: 25px,
+							font-size: 1.4rem
+						),
+						skins: (
+							dark: (
+								icon: (
+									default: #968ad4,
+									hover: #ffffff
+								),
+								bg: (
+									default: #323446,
+									hover: get-brand-color()
+								)
+							),
+							light: (
+								icon: (
+									default: lighten(#5e6383, 10%),
+									hover: #ffffff
+								),
+								bg: (
+									default: darken(#f8f8fb, 3%),
+									hover: get-brand-color()
+								)
+							)
+						)
+					)
+				)
+			),
+
+			// fixed mode
+			fixed: (
+				zindex: 100,
+				scroller: (
+					right: 5px,
+					color: (
+						default: darken(#f8f8fb, 3%),
+						drag: darken(#f8f8fb, 6%)
+					)
+				)
+			),		
+
+			// minimize mode
+			minimize: (
+				width: $m-aside-left-width-minimize,
+				transition:	all 0.3s ease
+			),					
+
+			// hidden mode
+			hide: (
+				transition:	all 0.3s ease,
+			)					
+		)
+	),
+
+	//== Right Aside
+	aside-right: (
+		// aside itself
+		self: (
+			width: 275px,
+			border-color: #eee,
+			padding: (
+				desktop: 30px,
+				mobile: 20px 0 0 0
+			)
+		)
+	),
+	
+	//== Horizontal Menu Sidebar For Mobile 
+	aside-header-menu-mobile: (
+		// aside itself
+		self: (
+			// default mode
+			default: (
+				bg-color: #ffffff,
+				width: 275px
+			),
+	
+			// fixed mode
+			fixed: (
+				zindex: 100
+			),
+
+			// offcanvas
+			offcanvas: (
+				zindex: 1001,
+				direction: right,
+				transition:	all .3s ease,
+				width: 275px,
+				close: (
+					layout: (
+						size: 25px,
+						font-size: 1.4rem
+					),
+					skins: (
+						dark: (
+							icon: (
+								default: #968ad4,
+								hover: #ffffff
+							),
+							bg: (
+								default: #323446,
+								hover: get-brand-color()
+							)
+						),
+						light: (
+							icon: (
+								default: lighten(#5e6383, 10%),
+								hover: #ffffff
+							),
+							bg: (
+								default: darken(#f8f8fb, 3%),
+								hover: get-brand-color()
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+);

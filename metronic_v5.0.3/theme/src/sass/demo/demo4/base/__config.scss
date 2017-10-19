@@ -1,0 +1,68 @@
+//
+//** Base Settings
+//
+
+$m-config-base: (
+	//== Loader
+	loader: (
+		self: (
+			bg-color: #fff,
+			zindex: 1000			
+		),
+		animation: (
+			speed: 1.2s,
+			delay: 1s
+		),
+		spinner: (
+			bg-color: #eee,
+			size: 30px
+		)		
+	),
+
+	//== body
+	body: (
+		// self
+		self: (
+			border-radius: 6px,
+			bg-color: #f3f4f9,
+			margin: (
+				desktop: (
+					boxed: 0 30px,
+					fluid: 0 7%
+				),
+				mobile: 0 15px
+			),
+			padding: (
+				desktop: 0 30px,
+				mobile: 0 15px
+			), 
+			scrollbar: (
+				radius: 6px,
+				width: 10px,
+				track-color: #ddd,
+				thumb-color: darken(#ddd, 5%)
+			)
+		),
+
+		// content
+		content: (
+			padding: (
+				desktop: 25px 0,
+				mobile: 20px 0
+			)
+		),
+
+		// content wrapper
+		wrapper: (
+			shadow: -27px 1px 94px -30px rgba(233,228,240,0.63),
+			space: 30px, // space between aside and wrapper
+		),
+
+		// body navigation bar(the horizontal menu)
+		nav: (
+			height: 70px,
+			bg-color: #ffffff,
+			shadow: get-shadow(light, '-')
+		)
+	)
+);

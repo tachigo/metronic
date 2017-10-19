@@ -1,0 +1,68 @@
+//
+//** Horizontal Menu
+// Build horizontal menu for desktop mode and aside/vertical menu for mobile mode
+
+//== Horizontal menu for desktop mode
+@include m-generate--menu-hor(array-get($m-config-menu-header, desktop));
+
+//== Vertical menu for mobile mode
+@include m-generate--menu-ver(array-get($m-config-menu-header, tablet-and-mobile));
+
+@include desktop {
+	.m-header-menu {
+		width: auto;
+		margin: 0 0 0 0;
+		
+		.m-menu__nav {
+			> .m-menu__item {
+				padding: 0px 20px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&.m-menu__item--more {
+					> .m-menu__link {
+						text-align: center;
+						
+						> .m-menu__link-icon {
+							line-height: 0; 	
+						}
+
+						&:hover {
+							> .m-menu__link-icon {
+								color: #ffffff;
+							}
+						}
+					}
+				}
+
+				&.m-menu__item--expanded,
+				&.m-menu__item--active {
+					> .m-menu__link > .m-menu__item-here {
+						@include m--build-smooth-arrow-vertical(top, large);
+						position: absolute;
+						top: 100%;
+						z-index: 1;
+						color: array-get($m-config-header, header, bottom, bg-color);
+						display: inline-block;
+					
+						.m-header--minimize-on & {
+							display: none;
+						}
+					}
+				}				
+			}
+		}
+	}
+}
+
+@include tablet-and-mobile {
+	.m-header-menu {
+		display: none;
+
+		.m-aside-header-menu-mobile--offcanvas-on & {
+			display: block;
+		}
+	}
+}

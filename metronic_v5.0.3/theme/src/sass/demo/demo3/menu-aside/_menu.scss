@@ -1,0 +1,99 @@
+//
+//** Aside Menus
+// Build left aside menu
+
+@include m-generate--menu-ver( $m-config-menu-aside );
+
+//== Desktop Mode
+@include desktop {
+	.m-aside-menu {
+		.m-menu__nav {
+			> .m-menu__item {				
+				> .m-menu__link  {
+					display: block;
+					position: relative;	
+					text-align: center;
+					height: auto;
+					padding: 1.25rem 1rem;
+
+					> .m-menu__link-icon {
+						display: inline-block;
+						text-align: center;
+						font-size: 2.2rem;
+					}
+
+					> .m-menu__link-title,
+					> .m-menu__link-text {
+						display: block;	
+						margin-top: 0.75rem;
+						text-align: center;
+						font-weight: 400;
+
+						.m-menu__link-wrap {
+						    margin: 0 auto;
+							width: auto;
+							text-align: center;
+
+							.m-menu__link-text {
+								width: auto;
+								text-align: center;
+								font-weight: 400;
+							}
+
+							.m-menu__link-badge {
+								position: absolute;
+								right: 0.75rem;
+								margin-top: -1px;
+							}
+						}
+					}
+
+					> .m-menu__link-arrow {
+						display: inline-block;
+						position: absolute;
+					}
+
+					> .m-menu__ver-arrow {
+						display: none;
+					}
+				}
+
+				&.m-menu__item--active {
+					> .m-menu__link  {
+						background: #282a3a;
+
+						.m-menu__link-text {
+							color: #fefefe !important;  
+						}
+
+						.m-menu__link-icon {
+							color: #bf2d46 !important;
+						}
+					}
+				}
+
+				&.m-menu__item--expanded,
+				&.m-menu__item--active {
+					> .m-menu__link  {
+						> .m-menu__item-here {
+							@include m--build-smooth-arrow-vertical(right, default);
+							position: absolute;
+							top: 2.5rem;
+							left: 100%;
+							z-index: 1;
+							margin-left: -8px;
+							color: array-get($m-config-base, body, content, bg-color);
+							display: inline-block;
+							overflow: visible;
+						}
+					}
+				}
+
+				> .m-menu__submenu {
+					top: 0.6rem !important;
+					margin-left: $m-aside-left-compact-width !important;
+				}
+			}
+		}
+	}
+}

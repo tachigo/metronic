@@ -1,0 +1,290 @@
+//
+//** Bootstrap Select Component
+//
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component--select-base() {
+    $m-general-padding: 10px 15px; 
+    $m-title-padding: 10px 15px;
+
+    // Bootstrap select base
+   .bootstrap-select.btn-group {
+        > .dropdown-toggle {
+            position: relative;
+            outline: none !important;
+            padding: array-get($m--forms, input, layout, self, size, default, padding, y) array-get($m--forms, input, layout, self, size, default, padding, x);
+            padding-right: array-get($m--forms, input, layout, self, size, default, padding, x) + 0.85rem;
+            
+            @include border-radius(array-get($m--forms, input, layout, self, size, default, border-radius), '!important'); 
+
+            &:focus {
+                outline: none !important; 
+            }
+
+            &:after {
+                @include m-generate-arrow-down-icon(true);   
+                border: 0;
+                top: 50%;
+                position: absolute;
+                margin-top: 0;
+                font-size: 0.85rem;
+                right: (array-get($m--forms, input, layout, self, size, default, padding, x) + 0.85rem);
+                display: inline-block;                            
+            }
+        }
+
+        .dropdown-menu.inner {
+            display: block;
+
+            > li {
+                > a {
+                    display: block;
+                    position: relative;
+                    outline: none !important;
+                    padding: $m-general-padding;    
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    // text
+                    .text {
+                        small {
+
+                        }
+                    }
+
+                    // icons
+                    @include icons-size((fontawesome: 1.2rem, lineawesome: 1.2rem, metronic: 1.1rem));
+                    @include icons-style {
+                        vertical-align: middle;
+                    }
+                }
+
+                &.selected {
+                    > a {
+                        span.check-mark { 
+                            @include la-icon('\f17b');  
+                            top: 50%;
+                            position: absolute;
+                            margin-top: - (0.85rem / 2);  
+                            font-size: 0.85rem;
+                            right: (array-get($m--forms, input, layout, self, size, default, padding, x));
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &.divider {
+                    margin: 10px 0;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                &.no-results {
+                    padding: $m-general-padding;   
+                }
+            }
+        }
+
+        .popover-title {
+            padding: $m-title-padding;
+            margin-bottom: 5px;
+
+            .close {
+                display: none;
+            }
+        }
+
+        .bs-searchbox, 
+        .bs-actionsbox, 
+        .bs-donebutton {
+            padding: $m-title-padding;
+        }
+        
+    }
+
+    // Bootstrap select component
+    select.m-bootstrap-select {
+        @include opacity(0);
+    }
+
+    .m-bootstrap-select.bootstrap-select.btn-group {
+        // input styles
+        &.m-bootstrap-select--pill {
+            > .dropdown-toggle {
+                @include border-radius(array-get($m--forms, input, layout, self, size, default, pill-radius), '!important'); 
+            }
+        }
+
+        &.m-bootstrap-select--square {
+            > .dropdown-toggle {
+                @include border-radius(0, '!important'); 
+            }
+        }
+    }
+}
+
+//== Component Skin
+@mixin m-build-component--select-skin($skin) {
+    // Bootstrap select base
+   .bootstrap-select.btn-group {
+        // dropdown button
+        > .dropdown-toggle {
+            &.btn-default,
+            &.btn-secondary {
+                background-color: transparent;
+                color: array-get($m--forms, input, skins, $skin, default, color, default);
+                @include shadow(none);
+
+                &.disabled,
+                &:disabled {
+                    background: array-get($m--forms, input, skins, $skin, default, border, disabled);
+                    border-color: array-get($m--forms, input, skins, $skin, default, bg, disabled);
+                }
+            }
+
+            &.bs-placeholder {
+                color: array-get($m--forms, input, skins, $skin, default, color, placeholder);
+
+                // state colors
+                @each $name, $color in $m--state-colors {
+                    &.btn-#{$name} {
+                        color: array-get($color, inverse);
+
+                        > .filter-option {
+                            @include opacity(0.8);
+                        }
+                    }
+                }
+            }
+        }
+
+        // menu shown state
+        &.show {
+            > .dropdown-toggle {
+
+                &.btn-default,
+                &.btn-secondary {
+                    border-color: array-get($m--forms, input, skins, $skin, solid, border, focus) !important;
+                    @include shadow(none);
+                    background-color: transparent;
+                }
+            }
+        }
+
+        // menu dropdown
+        .dropdown-menu.inner {
+            > li {
+                > a {
+                    .text {
+                        color: get-color($skin, regular, '+');
+
+                        small {
+                            color: get-color($skin, regular, '-');
+                        }
+                    }
+
+                    span.check-mark {
+                        color: get-color($skin, regular);
+                    }
+
+                    @include icons-style {
+                        color: get-color($skin, regular);
+                    }
+                }
+
+                &.selected,
+                &:hover {
+                    > a {
+                        background: get-color($skin, panel, '-');
+
+                        .text {
+                            color: get-color($skin, regular, '+');
+                        }
+
+                        span.check-mark {
+                            color: get-color($skin, regular, '+');
+                        }
+                    }
+                }
+
+                &.selected {
+                    > a {
+                        background: get-color($skin, panel, '--');
+                    }
+                }
+
+                &.disabled {
+                    > a {
+                        @include opacity(0.6);
+                    }
+                }
+
+                &.divider {
+                    border-bottom: 1px solid get-color($skin, panel, '-');
+                }
+
+                &.no-results {
+                    color: get-color($skin, regular);
+                }
+            }
+        }
+
+        // menu header
+        .popover-title {
+            background: get-color($skin, panel, '--');
+            border: 0;
+        }
+    }
+
+    // Bootstrap select component
+    .m-bootstrap-select.bootstrap-select.btn-group {
+        // input styles
+        &.m-bootstrap-select--air {
+            > .dropdown-toggle {
+                @include shadow( array-get($m--forms, input, skins, $skin, air, box-shadow, default) );
+            }
+        }
+
+        &.m-bootstrap-select--solid {
+            > .dropdown-toggle {
+                background-color: array-get($m--forms, input, skins, $skin, solid, bg, default);
+                border-color: array-get($m--forms, input, skins, $skin, solid, border, default);
+            }
+        }
+    }
+}
+
+//== Component Validation State
+@mixin m-build-component--select-validation-state($state, $color) {
+    .m-form.m-form--state .has-#{$state} {
+        .bootstrap-select.btn-group > {
+            .btn.btn-secondary,
+            .btn.btn-default {
+                border-color: $color;
+
+                &:hover {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component--select-base();
+
+//== Component Skin - Light
+@include m-build-component--select-skin(light);
+    
+//== Component Validation States
+@include m-build-component--select-validation-state(success, array-get($m--state-colors, success, base));
+@include m-build-component--select-validation-state(warning, array-get($m--state-colors, warning, base));
+@include m-build-component--select-validation-state(danger, array-get($m--state-colors, danger, base));  

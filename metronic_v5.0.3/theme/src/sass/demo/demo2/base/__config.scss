@@ -1,0 +1,64 @@
+//
+//** Base Settings
+//
+
+$m-config-base: (
+	//== Loader
+	loader: (
+		self: (
+			bg-color: #fff,
+			zindex: 1000			
+		),
+		animation: (
+			speed: 1.2s,
+			delay: 1s
+		),
+		spinner: (
+			bg-color: #eee,
+			size: 30px
+		)		
+	),
+
+	//== page
+	page: (
+		container: (
+			padding: (
+				wide: (
+					x: (
+						desktop: 30px,
+						mobile: 20px
+					)
+				),
+				fluid: (
+					x: (
+						desktop: 80px,
+						mobile: 20px
+					)
+				)
+			)
+		)
+	),
+
+	//== body
+	body: (
+		wrapper: (
+			shadow: -27px 1px 94px -30px rgba(233,228,240,0.63),
+			space: 40px, // space between aside and wrapper
+		),
+
+		//== content
+		content: (
+			// content padding for general and mobile modes
+			padding: (
+				desktop: (
+					x: 0, 
+					y: 30px
+				),
+				mobile: (
+					x: 0,
+					y: 20px
+				)
+			)
+		)
+	)
+);
